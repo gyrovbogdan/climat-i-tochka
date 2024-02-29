@@ -18,7 +18,7 @@
                     <h1>Свежий воздух и комфорт в вашем доме</h1>
                     <p class="opacity-75">Сплит-системы и системы вентиляции от компании "Климат и точка Крым".
                     </p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Узнать больше</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="{{ route('conditioners.index') }}">Узнать больше</a></p>
                 </div>
             </div>
         </div>
@@ -31,7 +31,8 @@
                 <div class="carousel-caption">
                     <h1>Жара не страшна!</h1>
                     <p>Профессиональная установка кондиционеров за 1 день.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#"> Получить скидку 10%</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="{{ route('conditioners.index') }}"> Получить скидку
+                            10%</a></p>
                 </div>
             </div>
         </div>
@@ -44,7 +45,8 @@
                 <div class="carousel-caption text-end">
                     <h1>Дышите легко!</h1>
                     <p>Очистка и дезинфекция систем вентиляции.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Заказать чистку</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="{{ route('conditioners.index') }}">Заказать чистку</a>
+                    </p>
                 </div>
             </div>
         </div>

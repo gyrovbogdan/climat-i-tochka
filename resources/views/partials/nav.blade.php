@@ -1,6 +1,5 @@
-<nav class="navbar bg-dark border-bottom border-body navbar-expand-lg fixed-top justify-content-lg-center px-3"
-    data-bs-theme="dark">
-    <div class="d-lg-flex">
+<nav class="navbar bg-dark border-body navbar-expand-lg fixed-top" data-bs-theme="dark">
+    <div class="container">
         <a class="navbar-brand" href="{{ route('index', false) }}">Климат и Точка Крым <span class=icon-dot>.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +17,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ strpos(Route::currentRouteName(), 'ventilations.index') === 0 ? 'active' : '' }}"
-                        href="{{ route('ventilations.index', false) }}">Вентиляция</a>
+                        href="{{ route('conditioners.index', false) }}">Вентиляция</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

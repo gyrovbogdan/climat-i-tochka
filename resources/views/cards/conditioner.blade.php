@@ -4,7 +4,7 @@
                 src="{{ $image }}"> </a>
         <figcaption class="info-wrap text-center">
             <div class='card-text'>
-                <a href="#" class="title" data-abc="true">
+                <a href="{{ route('conditioners.show', ['conditioner' => $id]) }}" class="title" data-abc="true">
                     <h5>{{ $name }}</h5>
                 </a>
             </div>
@@ -23,8 +23,9 @@
                 <p class='text-muted fw-medium'>{{ $country }}</p>
             </div>
         </div>
-        <button class=" btn btn-warning w-100 rounded-4-bottom fs-5">
+        <a class=" btn btn-warning w-100 rounded-4-bottom fs-5"
+            href="{{ route('conditioners.show', ['conditioner' => $id]) }}">
             Купить за <strong>{{ $price }} ₽</strong>
-        </button>
+        </a>
     </figure>
 </div>

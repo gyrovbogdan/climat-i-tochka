@@ -9,37 +9,44 @@
     <!-- content -->
     <section class="py-5">
         <div class="container">
-            <div class="row gx-5">
-                <aside class="col-lg-6">
-                    <div class="border rounded-4 mb-3 d-flex justify-content-center">
-                        <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
-                            src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg" />
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="carouselExampleIndicators" class="carousel carousel-dark border slide bg-white"
+                        data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active ">
+                                <img src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg"
+                                    class="d-block w-100 " alt="...">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg"
+                                    class="d-block w-100 " alt="...">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="d-flex justify-content-center mb-3">
-                        <div class="border rounded-4 mb-3">
-                            <img width="60" height="60" class="rounded-2"
-                                src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg" />
-                        </div>
-                        <div class="border rounded-4 mb-3">
-                            <img width="60" height="60" class="rounded-2"
-                                src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg" />
-                        </div>
-                        <div class="border rounded-4 mb-3">
-                            <img width="60" height="60" class="rounded-2"
-                                src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg" />
-                        </div>
-                        <div class="border rounded-4 mb-3">
-                            <img width="60" height="60" class="rounded-2"
-                                src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg" />
-                        </div>
-                        <div class="border rounded-4 mb-3">
-                            <img width="60" height="60" class="rounded-2"
-                                src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg" />
-                        </div>
-                    </div>
-                    <!-- thumbs-wrap.// -->
-                    <!-- gallery-wrap .end// -->
-                </aside>
+                </div>
                 <div class="col-lg-6">
                     <div class="ps-lg-3">
                         <h4 class="title text-dark">
@@ -76,7 +83,7 @@
         </div>
         <!-- content -->
 
-        <section class="bg-light border-top py-4">
+        <section class=" border-top py-4 my-4">
             <div class="container">
                 <div class="row gx-4">
                     <div class="col-lg-8 mb-4">
@@ -143,7 +150,7 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="px-0 border rounded-2 shadow-0">
+                        <div class="px-0 rounded-2 shadow-0">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Также от этой марки:</h5>
@@ -169,4 +176,5 @@
                 </div>
             </div>
         </section>
-    @endsection
+    </section>
+@endsection

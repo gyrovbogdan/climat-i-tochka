@@ -54,7 +54,8 @@ class ConditionerController extends Controller
      */
     public function show(string $id)
     {
-        return view('conditioner.show', ['conditioner' => Conditioner::find($id)]);
+
+        return view('conditioner.show', ['conditioner' => Conditioner::findOrFail($id)]);
     }
 
     /**
