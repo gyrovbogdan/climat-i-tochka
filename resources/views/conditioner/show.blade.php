@@ -47,7 +47,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 my-3">
                     <div class="ps-lg-3">
                         <h4 class="title text-dark">
                             {{ $conditioner['name'] }}
