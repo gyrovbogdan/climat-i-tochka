@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ConditionerController;
+use App\Http\Controllers\VentilationController;
+use App\Http\Controllers\ServicesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', HomeController::class);
+
+Route::resource('/conditioners', ConditionerController::class);
+//Route::resource('/ventilations', VentilationController::class);
+//Route::get('/services', [ServicesController::class]);

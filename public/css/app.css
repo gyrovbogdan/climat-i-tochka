@@ -1,0 +1,18 @@
+.icon-dot {
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+}
+
+body {
+    margin-top: 56px;
+    background-color: #fbfbfb;
+}
+
+main {
+    min-height: 80vh;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+}
