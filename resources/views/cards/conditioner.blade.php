@@ -9,7 +9,7 @@
                 </a>
             </div>
         </figcaption>
-        <div class="card-body">
+        <div class="card-body fw-semibold">
             <div class='d-flex justify-content-between'>
                 <p class='text-muted'>Марка</p>
                 <p class='text-muted fw-medium'>{{ $brand }}</p>
@@ -23,7 +23,7 @@
                 <p class='text-muted fw-medium'>{{ $country }}</p>
             </div>
         </div>
-        <a class=" btn btn-warning w-100 rounded-4-bottom fs-5"
+        <a class=" btn btn-buy w-100 rounded-4-bottom fs-5"
             href="{{ route('conditioners.show', ['conditioner' => $id]) }}">
             Купить за <strong>{{ $price }} ₽</strong>
         </a>

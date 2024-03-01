@@ -1,8 +1,66 @@
+:root {
+    --bg-cian: #8ed2d8;
+    --bg-cian-active: #84c0c6;
+    --text-muted: #f0f0f0;
+    --red: #ed254e;
+    --bg-buy-button: #f9e784;
+    --border-buy-button: #f1db5e;
+    --hover-bg-buy-button: #f8df52;
+
+    /*     --buy-bg-button: #586994; */
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: var(--bg-cian);
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-cian-active);
+}
+
+.bg-main {
+    background-color: var(--bg-cian);
+}
+
+nav .nav-link,
+.dropdown-item {
+    color: var(--text-muted);
+}
+
 .icon-dot {
-    color: rgb(255, 0, 0);
+    color: var(--red) !important;
     font-weight: 900;
 }
 
+.btn-buy {
+    background-color: var(--bg-buy-button);
+    border-color: var(--border-buy-button);
+}
+
+.btn-buy {
+    background-color: var(--bg-buy-button);
+    border-color: var(--border-buy-button);
+}
+
+.btn-buy:hover {
+    background-color: var(--hover-bg-buy-button);
+}
+
+.btn-buy:active {
+    background-color: var(--hover-bg-buy-button) !important;
+}
+
+/* .main-color {
+    background-color: #84c0c6;
+} */
+/* .main-color * {
+    color: white;
+} */
+
+/* .active,
+a:hover {
+    color: #13293d !important;
+} */
 body {
     margin-top: 56px;
     background-color: #fbfbfb;
