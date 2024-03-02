@@ -12,24 +12,9 @@ class ConditionerController extends Controller
      */
     public function index(Conditioner $conditioner)
     {
-        $valuesOfAttributes = [
-            'brand' => $conditioner->getValuesOfAttribute('brand')->sort(),
-            'country' => $conditioner->getValuesOfAttribute('country')->sort(),
-            'area' => $conditioner->getValuesOfAttribute('area')->sort()
-        ];
-
-        $query = Conditioner::query();
-
-        $conditions = ['country', 'brand', 'area'];
-        foreach ($conditions as $condition)
-            if (request()->query($condition))
-                $query->whereIn($condition, request()->query($condition));
-
-        if (request()->query('search'))
-            $query->where('name', 'like', '%' . request()->query('search') . '%');
-
         return view('conditioners.index', [
-            'conditioners' => $query->paginate(12), 'filter' => $valuesOfAttributes
+            'conditioners' => $conditioner->getResultsByQuery(),
+            'filter' => $conditioner->getValuesOfAttributes(['brand', 'country', 'area'])
         ]);
     }
 

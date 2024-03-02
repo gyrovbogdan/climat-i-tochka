@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Conditioner;
 use App\Models\Ventilation;
+use App\Models\Image;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,7 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Conditioner::factory()->count(30)->create();
+        Conditioner::factory()->count(30)->create()->each(function ($conditioner) {
+            $images = Image::factory()->count(5)->make();
+            $conditioner->images()->saveMany($images);
+        });
+
+
         Ventilation::factory()->count(30)->create();
     }
 }
