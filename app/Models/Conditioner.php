@@ -10,7 +10,7 @@ class Conditioner extends Model
 {
     use HasFactory;
 
-
+    protected $casts = ['images' => 'array'];
     public function getResultsByQuery()
     {
         $query = Conditioner::query();
@@ -27,11 +27,6 @@ class Conditioner extends Model
             $query->where('name', 'like', "%$searchTerm%");
 
         return $query->paginate(12);
-    }
-
-    public function images(): HasMany
-    {
-        return $this->HasMany(Image::class);
     }
 
     public function getValuesOfAttribute($column)

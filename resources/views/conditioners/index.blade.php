@@ -18,7 +18,7 @@
                 @foreach ($conditioners as $conditioner)
                     <div class="col mb-3 px-1">
                         @include('cards.conditioner', [
-                            'image' => 'https://ac-snab.ru/upload/iblock/aa7/aa752cc89065b492700fad7de38abab6.jpg',
+                            'image' => $conditioner['images'][0] ?? '',
                             'name' => $conditioner['name'],
                             'brand' => $conditioner['brand'],
                             'country' => $conditioner['country'],

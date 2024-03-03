@@ -15,12 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Conditioner::factory()->count(30)->create()->each(function ($conditioner) {
-            $images = Image::factory()->count(5)->make();
-            $conditioner->images()->saveMany($images);
-        });
-
-
+        Conditioner::factory()->count(30)->create();
         Ventilation::factory()->count(30)->create();
     }
 }

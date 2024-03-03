@@ -1,7 +1,8 @@
 <div class="container d-flex justify-content-center ">
     <figure class="card card-product-grid card-lg rounded-4"> <a
             href="{{ route('conditioners.show', ['conditioner' => $id]) }}" class="img-wrap" data-abc="true"> <img
-                src="{{ $image }}"> </a>
+                src="{{ $image ? asset("storage/$image") : asset('storage/placeholder.jpg') }}">
+        </a>
         <figcaption class="info-wrap text-center">
             <div class='card-text'>
                 <a href="{{ route('conditioners.show', ['conditioner' => $id]) }}" class="title" data-abc="true">
