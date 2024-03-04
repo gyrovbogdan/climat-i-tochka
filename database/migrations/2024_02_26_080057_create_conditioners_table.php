@@ -13,14 +13,13 @@ return new class extends Migration
     {
         Schema::create('conditioners', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('brand');
-            $table->string('images')->nullable();
             $table->string('name');
+            $table->text('images')->nullable();
+            $table->string('brand');
             $table->string('country');
-            $table->string('area');
-            $table->integer('price');
             $table->text('description');
+            $table->enum('type', config('global.types'));
+            $table->boolean('inverter');
         });
     }
 

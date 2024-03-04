@@ -16,22 +16,18 @@ class ConditionerFactory extends Factory
      */
     public function definition(): array
     {
-        /* $table->string('brand');
-            $table->string('name');
-            $table->string('country');
-            $table->string('area');
-            $table->integer('price');
-            $table->text('description'); */
-        $countries = ['China', 'Russia', 'Belarus', 'Japan'];
-        $areas = ['10 - 25', '25 - 50', '50 - 75', '75 - 100'];
-        // $brands = ['Haier', 'Toshiba', 'Hilpert LLC'];
+        $countries = ['China', 'Russia', 'Belarus', 'Japan'];;
+        $brands = ['Haier', 'Toshiba', 'Hilpert LLC', 'Береста'];
+        $types = config('global.types');
+
         return [
-            'brand' => fake()->company(),
             'name' => fake()->catchPhrase(),
+            # images , 
+            'brand' => $brands[array_rand($brands)],
             'country' => $countries[array_rand($countries)],
-            'area' => $areas[array_rand($areas)],
-            'price' => fake()->randomNumber(7, true),
-            'description' => fake()->paragraph()
+            'description' => fake()->paragraph(5),
+            'type' => $types[array_rand($types)],
+            'inverter' => fake()->boolean()
         ];
     }
 }

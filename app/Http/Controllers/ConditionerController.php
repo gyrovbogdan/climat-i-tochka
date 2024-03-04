@@ -4,17 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Conditioner;
+use App\Models\ConditionerModel;
 
 class ConditionerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Conditioner $conditioner)
+    public function index(ConditionerModel $model)
     {
+        $filter =
+            [
+                'area' => config('global.areas'),
+                'type' => config('global.types'),
+                'brand' => Conditioner::query()->distinct()->pluck('brand')->sort(),
+            ];
+
         return view('conditioners.index', [
-            'conditioners' => $conditioner->getResultsByQuery(),
-            'filter' => $conditioner->getValuesOfAttributes(['brand', 'country', 'area'])
+            'models' => $model->getResultsByQuery(),
+            'filter' => $filter
         ]);
     }
 
@@ -39,8 +47,7 @@ class ConditionerController extends Controller
      */
     public function show(string $id)
     {
-
-        return view('conditioner.show', ['conditioner' => Conditioner::findOrFail($id)]);
+        return view('conditioner.show', ['model' => ConditionerModel::with('conditioner')->findOrFail($id)]);
     }
 
     /**

@@ -24,58 +24,54 @@
         </div>
 
         <form action="{{ route('conditioners.index') }}">
-            <div class="input-group my-3">
+            <section class="input-group my-3">
                 <input type="text" class="form-control" name="search" placeholder="Название кондиционера"
-                    value="{{ isset(request()->query()['search']) ? e(request()->query()['search']) : '' }}"
+                    value{{ isset(request()->query()['search']) ? request()->query()['search'] : '' }}
                     aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <button class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg"
                         width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg></button>
-            </div>
-
-            <h6>Марка:</h6>
-            <section class="sidebar-list overflow-auto px-2">
-                @foreach ($filter['brand'] as $brand)
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="brand[]" value="{{ $brand }}"
-                            {{ isset(request()->query()['brand']) && in_array($brand, request()->query()['brand']) ? 'checked' : '' }}
-                            id="checkbox-{{ $brand }}">
-                        <label class="form-check-label" for="checkbox-{{ $brand }}">
-                            {{ $brand }}
-                        </label>
-                    </div>
-                @endforeach
             </section>
 
-            <h6>Площадь:</h6>
-            <section class="sidebar-list overflow-auto px-2">
-                @foreach ($filter['area'] as $area)
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="area[]" value="{{ $area }}"
-                            {{ isset(request()->query()['area']) && in_array($area, request()->query()['area']) ? 'checked' : '' }}
-                            id="checkbox-{{ $area }}">
-                        <label class="form-check-label" for="checkbox-{{ $area }}">
-                            {{ $area }}
-                        </label>
-                    </div>
-                @endforeach
+            <section>
+                <h6><label for="sort">Отсортировать по:</label></h6>
+                <select class="form-select" aria-label="select" name='sort' id='sort'>
+                    <option value="desc">По возрастанию цены</option>
+                    <option value="asc" selected>По убыванию цены</option>
+                </select>
             </section>
 
-            <h6>Страна:</h6>
-            <section class="sidebar-list overflow-auto px-2">
-                @foreach ($filter['country'] as $country)
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="country[]" value="{{ $country }}"
-                            {{ isset(request()->query()['country']) && in_array($country, request()->query()['country']) ? 'checked' : '' }}
-                            id="checkbox-{{ $country }}">
-                        <label class="form-check-label" for="checkbox-{{ $country }}">
-                            {{ $country }}
+            @foreach ($filterByArray as $filterName => $filter)
+                <h6 class='my-2'>{{ $filterName }}:</h6>
+                <section class="sidebar-list overflow-auto px-2">
+                    @foreach ($filter['values'] as $value)
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="{{ $filter['name'] }}[]"
+                                value="{{ $value }}" @if (isset(request()->query()[$filter['name']]) &&
+                                        is_array(request()->query()[$filter['name']]) &&
+                                        in_array($value, request()->query()[$filter['name']])) {{ 'checked' }} @endif
+                                id="checkbox-{{ $value }}">
+                            <label class="form-check-label" for="checkbox-{{ $value }}">
+                                {{ $value }}
+                            </label>
+                        </div>
+                    @endforeach
+                </section>
+            @endforeach
+
+            @foreach ($filterByBoolean as $filterName => $name)
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="{{ $name }}" value="1"
+                        {{ isset(request()->query()[$name]) ? 'checked' : '' }} id="checkbox-{{ $name }}">
+                    <h6> <label class="form-check-label" for="checkbox-{{ $name }}">
+                            {{ $filterName }}
                         </label>
-                    </div>
-                @endforeach
-            </section>
+                    </h6>
+                </div>
+            @endforeach
+
             <div class="d-flex justify-content-center">
                 <button class="btn btn-outline-secondary w-100 my-3">Поиск
                 </button>

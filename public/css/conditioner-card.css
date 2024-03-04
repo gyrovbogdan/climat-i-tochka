@@ -3,10 +3,6 @@
     height: 450px;
 }
 
-a {
-    text-decoration: none !important;
-}
-
 .card-product-list,
 .card-product-grid {
     margin-bottom: 0;
@@ -69,4 +65,8 @@ a {
 
 .rounded-4-bottom {
     border-radius: 0 0 var(--bs-border-radius-xl) var(--bs-border-radius-xl) !important;
+}
+
+.bg-red {
+    background-color: var(--red) !important;
 }

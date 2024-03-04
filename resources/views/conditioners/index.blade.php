@@ -11,20 +11,29 @@
 
 
 @section('content')
-    @include('partials.sidebar')
+    @include('partials.sidebar', [
+        'filterByArray' => [
+            'Марка' => ['name' => 'brand', 'values' => $filter['brand']],
+            'Площадь помещения' => ['name' => 'area', 'values' => $filter['area']],
+            'Тип кондиционера' => ['name' => 'type', 'values' => $filter['type']],
+        ],
+        'filterByBoolean' => ['Инвертор' => 'invertor', 'Wi-Fi' => 'wi-fi'],
+    ])
     <div class="container py-3">
-        @if (count($conditioners))
+        @if (count($models))
             <div class="row row-cols-1 row-cols-md-2 row-cols-sm-1 row-cols-lg-2 row-cols-xl-3">
-                @foreach ($conditioners as $conditioner)
+                @foreach ($models as $model)
                     <div class="col mb-3 px-1">
                         @include('cards.conditioner', [
-                            'image' => $conditioner['images'][0] ?? '',
-                            'name' => $conditioner['name'],
-                            'brand' => $conditioner['brand'],
-                            'country' => $conditioner['country'],
-                            'area' => $conditioner['area'],
-                            'price' => $conditioner['price'],
-                            'id' => $conditioner['id'],
+                            'image' => $model['conditioner']['images'][0] ?? 'placeholder.jpg',
+                            'name' => $model['conditioner']['name'] . ' ' . $model['name'],
+                            'brand' => $model['conditioner']['brand'],
+                            'type' => $model['conditioner']['type'],
+                            'invertor' => $model['conditioner']['invertor'],
+                            'area' => $model['area'],
+                            'price' => $model['price'],
+                            'promo_price' => $model['promo_price'],
+                            'id' => $model['id'],
                         ])
                     </div>
                 @endforeach
@@ -34,6 +43,6 @@
         @endif
     </div>
     <div class="container ali">
-        {{ $conditioners->links() }}
+        {{ $models->links() }}
     </div>
 @endsection
