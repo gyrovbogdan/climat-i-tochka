@@ -4,6 +4,9 @@
     Кондиционеры
 @endsection
 
+@push('stylesheets')
+    <link rel="stylesheet" href="{{ asset('css/conditioner-show.css') }}">
+@endpush
 
 @section('content')
     <!-- content -->
@@ -26,10 +29,11 @@
 
                         <hr />
 
-                        <p>
+                        <p class="fw-semibold">
                             {!! $model['conditioner']['description'] !!}
                         </p>
 
+                        <hr>
                         <div class="fw-medium">
                             <a class='d-flex justify-content-between'
                                 href="{{ route('conditioners.index', ['brand[]' => $model['conditioner']['brand']]) }}">
@@ -59,16 +63,17 @@
 
 
                         </div>
-
-                        <div class="my-4 mx-3 btn btn-buy">
-                            <span class="h5">Заказать за
-                                @if ($model['promo_price'])
-                                    <strong class="fs-5">{{ $model['promo_price'] }}₽</strong> <span
-                                        class='text-decoration-line-through text-muted'>{{ $model['price'] }}₽</span>
-                                @else
-                                    <strong class="fs-5">{{ $model['price'] }}₽</strong>
-                                @endif
-                            </span>
+                        <div class="d-flex justify-content-center">
+                            <div class="my-4 mx-3 btn btn-buy">
+                                <span class="h5">Заказать за
+                                    @if ($model['promo_price'])
+                                        <strong class="fs-5">{{ $model['promo_price'] }}₽</strong> <span
+                                            class='text-decoration-line-through text-muted'>{{ $model['price'] }}₽</span>
+                                    @else
+                                        <strong class="fs-5">{{ $model['price'] }}₽</strong>
+                                    @endif
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -79,8 +84,15 @@
         <section class=" border-top py-4 my-4">
             <div class="container">
                 <div class="row gx-4">
-                    @include('partials.tabs', ['model' => $model])
-                    @include('partials.also')
+                    @include('partials.tabs', [
+                        'model' => $model,
+                        'services' => $services,
+                        'additionalServices' => $additionalServices,
+                    ])
+                    @include('partials.also', [
+                        'conditioner' => $fromSeries[0],
+                        'models' => $fromSeries[0]['conditionerModel']->where('id', '!=', $model['id']),
+                    ])
                 </div>
             </div>
         </section>

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdditionalServices;
 use Illuminate\Http\Request;
 use App\Models\Conditioner;
 use App\Models\ConditionerModel;
+use App\Models\Services;
+use Illuminate\Database\Eloquent\Builder;
 
 class ConditionerController extends Controller
 {
@@ -47,7 +50,14 @@ class ConditionerController extends Controller
      */
     public function show(string $id)
     {
-        return view('conditioner.show', ['model' => ConditionerModel::with('conditioner')->findOrFail($id)]);
+        return view('conditioner.show', [
+            'model' => ConditionerModel::with('conditioner')->findOrFail($id),
+            'services' => Services::get(),
+            'additionalServices' => AdditionalServices::get(),
+            'fromSeries' => Conditioner::with('conditionerModel')->whereHas('conditionerModel', function (Builder $query) use ($id) {
+                $query->where('id', $id);
+            })->get()
+        ]);
     }
 
     /**

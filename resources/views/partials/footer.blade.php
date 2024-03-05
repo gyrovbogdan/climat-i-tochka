@@ -9,7 +9,10 @@
                 </svg>
             </a>
             <span class="mb-3 mb-md-0 text-body-secondary">+7 (978) 999-99-99</span>
+
         </div>
+
+        <div><a class='text-muted' href="{{ route('filament.admin.auth.login') }}">Для администрации</a></div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3"><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg"

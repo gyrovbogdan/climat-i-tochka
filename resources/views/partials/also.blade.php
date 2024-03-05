@@ -2,20 +2,45 @@
     <div class="px-0 rounded-2 shadow-0">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Также от этой марки:</h5>
-                <div class="d-flex mb-3">
-                    <a href="#" class="me-3">
-                        <img src="https://www.mitsubishi.ru/upload/medialibrary/f94/%D0%9A%D0%9E%D0%9D%D0%94%D0%98%D0%A6%D0%98%D0%9E%D0%9D%D0%95%D0%A0.jpg"
-                            style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
-                    </a>
-                    <div class="info">
-                        <a href="" class="nav-link mb-1">
-                            Rucksack Backpack Large <br />
-                            Line Mounts
-                        </a>
-                        <strong class="text-dark"> $38.90</strong>
+                <h5 class="card-title">В этой серии:</h5>
+                @foreach ($models as $model)
+                    <hr>
+
+                    <div class="d-flex mb-3 flex-column flex-md-row flex-lg-column justify-content-center">
+                        <div class="mx-auto">
+                            <div class="img-wrap">
+                                <a href="{{ route('conditioners.show', ['conditioner' => $model['id']]) }}"
+                                    data-abc="true">
+                                    <img
+                                        src="{{ asset('storage/' . ($conditioner['images'][0] ?? 'placeholder.jpg')) }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info fw-semibold">
+                            <a href="{{ route('conditioners.show', ['conditioner' => $model['id']]) }}"
+                                class="nav-link mb-1">
+                                {{ $conditioner['name'] . ' ' . $model['name'] }}
+                            </a>
+                            <a class='d-flex justify-content-between'
+                                href="{{ route('conditioners.index', ['area[]' => $model['area']]) }}">
+                                <p class='text-muted'>Площадь</p>
+                                <p class='text-muted'>{{ $model['area'] }}м. кв.</p>
+                            </a>
+                            <div class="d-flex justify-content-center">
+                                <div class="btn btn-buy">
+                                    <span class="h6">Заказать за
+                                        @if ($model['promo_price'])
+                                            <strong class="fs-6">{{ $model['promo_price'] }}₽</strong> <span
+                                                class='text-decoration-line-through text-muted'>{{ $model['price'] }}₽</span>
+                                        @else
+                                            <strong class="fs-6">{{ $model['price'] }}₽</strong>
+                                        @endif
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

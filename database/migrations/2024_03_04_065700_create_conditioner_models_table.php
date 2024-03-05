@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('conditioner_id')->references('id')->on('conditioners');
             $table->string('name');
             $table->enum('area', config('global.areas'));
-            $table->string('price');
-            $table->string('promo_price')->nullable();
+            $table->integer('price');
+            $table->integer('promo_price')->nullable();
             $table->string('performance_cold')->nullable();
             $table->string('performance_warm')->nullable();
             $table->string('power_input_cold')->nullable();
