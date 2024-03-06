@@ -42,7 +42,7 @@
 }
 
 .first-image {
-    background-image: url("https://lavali.ru/wp-content/uploads/2023/08/3.jpg");
+    background-image: url("/images/first-image.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 40%;
@@ -50,7 +50,7 @@
 
 .second-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-        url("/storage/first-image.jpg");
+        url("/images/second-image.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 40%;
@@ -58,7 +58,7 @@
 
 .third-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url("https://pro-dachnikov.com/uploads/posts/2023-01/1673060730_pro-dachnikov-com-p-konditsioner-v-komnate-foto-74.jpg");
+        url("/images/third-image.jpg");
     background-size: cover;
     background-position-x: 10%;
     background-position-y: center;
