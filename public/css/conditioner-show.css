@@ -19,5 +19,5 @@
 }
 
 #pills-tab li .active {
-    color: var(--bg-blue) !important;
+    color: #0073b7 !important;
 }
