@@ -5,7 +5,7 @@
 @endsection
 
 @push('stylesheets')
-    <link rel="stylesheet" href="{{ asset('css/ventilation.css', false) }}">
+    <link rel="stylesheet" href="{{ asset('css/ventilation.css') }}">
 @endpush
 
 
