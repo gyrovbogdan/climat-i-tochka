@@ -5,8 +5,8 @@
 @endsection
 
 @push('stylesheets')
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/conditioner-card.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}?v1.0">
+    <link rel="stylesheet" href="{{ asset('css/conditioner-card.css') }}?v1.0">
 @endpush
 
 

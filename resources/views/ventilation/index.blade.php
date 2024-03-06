@@ -5,7 +5,7 @@
 @endsection
 
 @push('stylesheets')
-    <link rel="stylesheet" href="{{ asset('css/ventilation.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ventilation.css') }}?v1.0">
 @endpush
 
 
@@ -101,7 +101,7 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed fw-semibold fs-5" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button fw-semibold fs-5" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Как одновременно сделать вентиляцию и кондиционирование?
                     </button>
