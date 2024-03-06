@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-center ">
     <figure class="card card-product-grid card-lg rounded-4"> <a
             href="{{ route('conditioners.show', ['conditioner' => $id]) }}" class="img-wrap" data-abc="true"> <img
-                src="{{ asset("storage/$image") }}">
+                src="{{ asset("storage/$image", false) }}">
         </a>
         @if ($promo_price)
             <div class="position-absolute ml-auto" style="right: 20px; top: 10px">
