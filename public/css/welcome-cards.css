@@ -1,6 +1,6 @@
 .left-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/images/left-image.jpg");
+        url("/images/left-image.jpg?v1.0");
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
@@ -8,7 +8,7 @@
 
 .right-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/images/right-image.jpeg");
+        url("/images/right-image.jpeg?v1.0");
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
