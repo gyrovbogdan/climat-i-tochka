@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class VentilationController extends Controller
 {
@@ -11,6 +11,6 @@ class VentilationController extends Controller
      */
     public function index()
     {
-        return view('ventilation.index');
+        return view('web.sections.ventilation.index', ['contacts' => Contact::get()]);
     }
 }

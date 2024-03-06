@@ -17,7 +17,6 @@ use App\Http\Controllers\ServicesController;
 */
 
 Route::resource('/', HomeController::class);
-
 Route::resource('/conditioners', ConditionerController::class);
 Route::resource('/ventilations', VentilationController::class);
 Route::resource('/services', ServicesController::class);

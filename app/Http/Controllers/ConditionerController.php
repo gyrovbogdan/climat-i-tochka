@@ -23,26 +23,10 @@ class ConditionerController extends Controller
                 'brand' => Conditioner::query()->distinct()->pluck('brand')->sort(),
             ];
 
-        return view('conditioners.index', [
+        return view('web.sections.conditioner.index.index', [
             'models' => $model->getResultsByQuery(),
             'filter' => $filter
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -50,7 +34,7 @@ class ConditionerController extends Controller
      */
     public function show(string $id)
     {
-        return view('conditioner.show', [
+        return view('web.sections.conditioner.show.index', [
             'model' => ConditionerModel::with('conditioner')->findOrFail($id),
             'services' => Service::get(),
             'additionalServices' => AdditionalService::get(),
@@ -58,29 +42,5 @@ class ConditionerController extends Controller
                 $query->where('id', $id);
             })->get()
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }

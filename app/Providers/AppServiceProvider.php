@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         Conditioner::unguard();
-        view()->composer(['partials.footer', 'ventilation.index'], function ($view) {
+        view()->composer(['web.layout.partials.footer', 'ventilation.index'], function ($view) {
             $view->with('contacts', Contact::get());
         });
     }

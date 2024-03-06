@@ -11,6 +11,6 @@ class ServicesController extends Controller
 {
     public function index()
     {
-        return view('services.index', ['services' => Service::get(), 'additionalServices' => AdditionalService::get()]);
+        return view('web.sections.services.index', ['services' => Service::get(), 'additionalServices' => AdditionalService::get()]);
     }
 }

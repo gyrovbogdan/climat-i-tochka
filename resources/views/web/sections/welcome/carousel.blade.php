@@ -13,7 +13,8 @@
                 <div class="carousel-caption text-start">
                     <h1>Жара не страшна!</h1>
                     <p class="caption-text fw-semibold">Профессиональная установка кондиционеров за 1 день.</p>
-                    <p><a class="btn btn-lg btn-outline-light" href="{{ route('conditioners.index') }}"> Получить скидку
+                    <p><a class="btn btn-lg btn-outline-light bg-blur" href="{{ route('conditioners.index') }}">
+                            Получить скидку
                             10%</a></p>
                 </div>
             </div>
@@ -26,7 +27,7 @@
                         точка
                         Крым".
                     </p>
-                    <p><a class="btn btn-lg btn-light" href="{{ route('conditioners.index') }}">Узнать
+                    <p><a class="btn btn-lg btn-outline-light bg-blur" href="{{ route('conditioners.index') }}">Узнать
                             больше</a>
                     </p>
                 </div>

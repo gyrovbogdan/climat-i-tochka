@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('web.layout.master')
 
 
 @push('stylesheets')
@@ -8,7 +8,7 @@
 @endpush
 
 @section('content')
-    @include('partials.welcome-carousel')
-    @include('partials.welcome-cards')
-    @include('partials.features')
+    @include('web.sections.welcome.carousel')
+    @include('web.sections.welcome.cards')
+    @include('web.sections.welcome.features')
 @endsection
