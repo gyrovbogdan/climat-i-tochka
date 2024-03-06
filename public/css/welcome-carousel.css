@@ -6,6 +6,16 @@
     bottom: 3rem;
     z-index: 10;
 }
+.ml-auto {
+    margin-left: auto;
+}
+
+.caption-text {
+    padding-inline: 0.5rem;
+    border-radius: 1rem;
+    width: fit-content;
+    backdrop-filter: blur(2px);
+}
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
@@ -29,4 +39,27 @@
     .featurette-heading {
         margin-top: 7rem;
     }
+}
+
+.first-image {
+    background-image: url("https://lavali.ru/wp-content/uploads/2023/08/3.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 40%;
+}
+
+.second-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url("/storage/first-image.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 40%;
+}
+
+.third-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("https://pro-dachnikov.com/uploads/posts/2023-01/1673060730_pro-dachnikov-com-p-konditsioner-v-komnate-foto-74.jpg");
+    background-size: cover;
+    background-position-x: 10%;
+    background-position-y: center;
 }

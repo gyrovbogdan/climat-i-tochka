@@ -1,0 +1,15 @@
+.left-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("https://bigfoto.name/uploads/posts/2022-03/1648725309_23-bigfoto-name-p-konditsioner-v-komnate-49.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.right-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("https://img1.teletype.in/files/45/6a/456a0aaf-98ed-4a7d-b26b-3d2bb81cb1a8.jpeg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}

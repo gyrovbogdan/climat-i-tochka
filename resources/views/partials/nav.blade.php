@@ -12,26 +12,16 @@
                         href="{{ route('index', false) }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ strpos(Route::currentRouteName(), 'conditioners.index') === 0 ? 'active' : '' }}"
+                    <a class="nav-link {{ strpos(Route::currentRouteName(), 'conditioners') === 0 ? 'active' : '' }}"
                         href="{{ route('conditioners.index', false) }}">Кондиционеры</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ strpos(Route::currentRouteName(), 'ventilations.index') === 0 ? 'active' : '' }}"
-                        href="{{ route('conditioners.index', false) }}">Вентиляция</a>
+                    <a class="nav-link {{ strpos(Route::currentRouteName(), 'ventilations') === 0 ? 'active' : '' }}"
+                        href="{{ route('ventilations.index', false) }}">Вентиляция</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Услуги
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Ремонтные работы</a></li>
-                        <li><a class="dropdown-item" href="#">Обслуживание</a></li>
-                        <li><a class="dropdown-item" href="#">Установка</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">О нас</a>
+                    <a class="nav-link {{ strpos(Route::currentRouteName(), 'services') === 0 ? 'active' : '' }}"
+                        href="{{ route('services.index', false) }}">Услуги</a>
                 </li>
             </ul>
         </div>

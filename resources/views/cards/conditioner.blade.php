@@ -43,10 +43,10 @@
             href="{{ route('conditioners.show', ['conditioner' => $id]) }}">
             Купить за
             @if ($promo_price)
-                <strong class="fs-5">{{ $promo_price }}₽</strong> <span
-                    class='text-decoration-line-through text-muted'>{{ $price }}₽</span>
+                <strong class="fs-5">{{ number_format($promo_price, 2, ',', ' ') }}₽</strong> <span
+                    class='text-decoration-line-through text-muted'>{{ number_format($price, 2, ',', ' ') }}₽</span>
             @else
-                <strong class="fs-5">{{ $price }}₽</strong>
+                <strong class="fs-5">{{ number_format($price, 2, ',', ' ') }}₽</strong>
             @endif
         </a>
     </figure>

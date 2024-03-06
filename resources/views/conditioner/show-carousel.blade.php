@@ -1,8 +1,9 @@
 <div id="carouselExampleIndicators" class="carousel carousel-dark border slide bg-white" data-bs-ride="carousel">
     <div class="carousel-indicators">
         @foreach ($images as $key => $image)
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="$key" class="active"
-                aria-current="true" aria-label="Slide $key"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $key }}"
+                class="{{ $key == 0 ? 'active' : '' }}" aria-current="true"
+                aria-label="Slide {{ $key }}"></button>
         @endforeach
     </div>
     <div class="carousel-inner">

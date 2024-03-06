@@ -1,30 +1,52 @@
 :root {
-    --bg-cian: #8ed2d8;
-    --bg-cian-active: #84c0c6;
+    --bg-blue: #0073b7;
+    --bg-blue-active: #007ec7;
     --text-muted: #f0f0f0;
     --red: #ed254e;
-    --bg-buy-button: #f9e784;
-    --border-buy-button: #f1db5e;
-    --hover-bg-buy-button: #f8df52;
+    --bg-buy-button: #4caf50;
+    --border-buy-button: #4caf50;
+    --hover-bg-buy-button: #5fc062;
 
     /*     --buy-bg-button: #586994; */
 }
 
+.btn-primary {
+    background-color: var(--bg-blue);
+    border-color: var(--bg-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--bg-blue-active);
+    border-color: var(--bg-blue-active);
+}
+
+.btn-primary:active {
+    background-color: var(--bg-blue-active);
+    border-color: var(--bg-blue-active);
+}
+
 .navbar-nav > li > .dropdown-menu {
-    background-color: var(--bg-cian);
+    background-color: var(--bg-blue);
 }
 
 .dropdown-item:hover {
-    background-color: var(--bg-cian-active);
+    background-color: var(--bg-blue-active);
 }
 
 .bg-main {
-    background-color: var(--bg-cian);
+    background-color: var(--bg-blue);
 }
 
-nav .nav-link,
-.dropdown-item {
-    color: var(--text-muted);
+nav .dropdown-item {
+    color: #d1dcff;
+}
+
+nav .nav-link {
+    color: #d1dcff;
+}
+
+nav .nav-link:hover {
+    color: #fff;
 }
 
 .icon-dot {
@@ -35,14 +57,20 @@ nav .nav-link,
 .btn-buy {
     background-color: var(--bg-buy-button);
     border-color: var(--border-buy-button);
+    color: #fff;
+}
+.btn-buy .text-muted {
+    color: #f7f7f7 !important;
 }
 
 .btn-buy:hover {
     background-color: var(--hover-bg-buy-button);
+    color: #fff;
 }
 
 .btn-buy:active {
     background-color: var(--hover-bg-buy-button) !important;
+    color: #fff !important;
 }
 
 p {

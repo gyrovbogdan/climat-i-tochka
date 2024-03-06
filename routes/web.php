@@ -20,4 +20,4 @@ Route::resource('/', HomeController::class);
 
 Route::resource('/conditioners', ConditionerController::class);
 Route::resource('/ventilations', VentilationController::class);
-//Route::get('/services', [ServicesController::class]);
+Route::resource('/services', ServicesController::class);

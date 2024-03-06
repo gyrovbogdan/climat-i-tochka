@@ -8,44 +8,36 @@
     </div>
 
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-            </svg>
+        <div class="carousel-item first-image active">
             <div class="container">
                 <div class="carousel-caption text-start">
-                    <h1>Свежий воздух и комфорт в вашем доме</h1>
-                    <p class="opacity-75">Сплит-системы и системы вентиляции от компании "Климат и точка Крым".
-                    </p>
-                    <p><a class="btn btn-lg btn-primary" href="{{ route('conditioners.index') }}">Узнать больше</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-            </svg>
-            <div class="container">
-                <div class="carousel-caption">
                     <h1>Жара не страшна!</h1>
-                    <p>Профессиональная установка кондиционеров за 1 день.</p>
-                    <p><a class="btn btn-lg btn-primary" href="{{ route('conditioners.index') }}"> Получить скидку
+                    <p class="caption-text fw-semibold">Профессиональная установка кондиционеров за 1 день.</p>
+                    <p><a class="btn btn-lg btn-outline-light" href="{{ route('conditioners.index') }}"> Получить скидку
                             10%</a></p>
                 </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-            </svg>
+        <div class="carousel-item second-image">
+            <div class="container">
+                <div class="carousel-caption text-center">
+                    <h1>Свежий воздух и комфорт в вашем доме</h1>
+                    <p class="caption-text fw-semibold mx-auto">Сплит-системы и системы вентиляции от компании "Климат и
+                        точка
+                        Крым".
+                    </p>
+                    <p><a class="btn btn-lg btn-light" href="{{ route('conditioners.index') }}">Узнать
+                            больше</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item third-image">
             <div class="container">
                 <div class="carousel-caption text-end">
                     <h1>Дышите легко!</h1>
-                    <p>Очистка и дезинфекция систем вентиляции.</p>
-                    <p><a class="btn btn-lg btn-primary" href="{{ route('conditioners.index') }}">Заказать чистку</a>
+                    <p class="caption-text fw-semibold ml-auto">Очистка и дезинфекция систем вентиляции.</p>
+                    <p><a class="btn btn-lg btn-light" href="{{ route('conditioners.index') }}">Заказать чистку</a>
                     </p>
                 </div>
             </div>

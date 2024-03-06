@@ -6,9 +6,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Conditioner;
 use App\Models\ConditionerModel;
-use App\Models\Services;
-use App\Models\AdditionalServices;
-use App\Models\Contacts;
+use App\Models\Service;
+use App\Models\AdditionalService;
+use App\Models\Contact;
 use App\Models\User;
 
 class DatabaseSeeder extends Seeder
@@ -47,12 +47,12 @@ class DatabaseSeeder extends Seeder
                 $model::create(['name' => $serviceName, 'price' => $price]);
         }
 
-        createServices(Services::class, $services);
-        createServices(AdditionalServices::class, $additionalServices);
+        createServices(Service::class, $services);
+        createServices(AdditionalService::class, $additionalServices);
 
-        Contacts::create(['name' => 'phoneNumber', 'data' => '+7 (978) 123-45-67']);
-        Contacts::create(['name' => 'vkGroup', 'data' => 'https://smthing']);
+        Contact::create(['name' => 'phoneNumber', 'data' => '+7 (978) 123-45-67']);
+        Contact::create(['name' => 'vkGroup', 'data' => 'https://smthing']);
 
-        // User::create(['name' => 'admin', 'email' => 'admin@admin.com', 'password' => 'admin']);
+        User::create(['name' => 'admin', 'email' => 'admin@admin.com', 'password' => 'admin']);
     }
 }

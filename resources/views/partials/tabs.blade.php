@@ -1,7 +1,7 @@
 <div class="col-lg-8 mb-4">
     <div class="border rounded-2 px-3 py-2 bg-white">
         <!-- Pills navs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
                     data-bs-target="#description-tab-pane" type="button" role="tab"
@@ -31,8 +31,8 @@
                         <td> Тепло </td>
                     </tr>
                     <tr>
-                        <td>{{ $model['performance_cold'] }}</td>
-                        <td>{{ $model['performance_warm'] }}</td>
+                        <td>{{ $model['performance_cold'] ?? '-' }}</td>
+                        <td>{{ $model['performance_warm'] ?? '-' }}</td>
                     </tr>
 
                     <thead>
@@ -43,8 +43,8 @@
                         <td> Тепло </td>
                     </tr>
                     <tr>
-                        <td>{{ $model['power_input_cold'] }}</td>
-                        <td>{{ $model['power_input_warm'] }}</td>
+                        <td>{{ $model['power_input_cold'] ?? '-' }}</td>
+                        <td>{{ $model['power_input_warm'] ?? '-' }}</td>
                     </tr>
 
                     <thead>

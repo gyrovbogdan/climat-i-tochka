@@ -30,10 +30,13 @@
                                 <div class="btn btn-buy">
                                     <span class="h6">Заказать за
                                         @if ($model['promo_price'])
-                                            <strong class="fs-6">{{ $model['promo_price'] }}₽</strong> <span
-                                                class='text-decoration-line-through text-muted'>{{ $model['price'] }}₽</span>
+                                            <strong
+                                                class="fs-6">{{ number_format($model['promo_price'], 2, ',', ' ') }}₽</strong>
+                                            <span
+                                                class='text-decoration-line-through text-muted'>{{ number_format($model['price'], 2, ',', ' ') }}₽</span>
                                         @else
-                                            <strong class="fs-6">{{ $model['price'] }}₽</strong>
+                                            <strong
+                                                class="fs-6">{{ number_format($model['price'], 2, ',', ' ') }}₽</strong>
                                         @endif
                                     </span>
                                 </div>

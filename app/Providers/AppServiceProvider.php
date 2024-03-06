@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Conditioner;
+use App\Models\Contact;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,5 +24,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         Conditioner::unguard();
+        view()->composer(['partials.footer', 'ventilation.index'], function ($view) {
+            $view->with('contacts', Contact::get());
+        });
     }
 }
