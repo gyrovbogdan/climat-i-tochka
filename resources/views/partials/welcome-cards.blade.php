@@ -12,7 +12,8 @@
                         бюджет.
                     </li>
                 </ul>
-                <button class="btn btn-light mt-1" type="button">Узнать больше и заказать кондиционер</button>
+                <a class="btn btn-light mt-1" href="{{ route('conditioners.index') }}">Узнать больше и заказать
+                    кондиционер</a>
             </div>
         </div>
         <div class="col-md-6">
@@ -26,7 +27,8 @@
                     <li class="list-group-item bg-transparent text-white">Различные модели вентиляторов для дома и
                         офиса.</li>
                 </ul>
-                <button class="btn btn-light mt-1" type="button">Выбрать вентиляцию</button>
+                <a class="btn btn-light mt-1" href="{{ route('ventilations.index') }}">Выбрать
+                    вентиляцию</a>
             </div>
         </div>
     </div>
