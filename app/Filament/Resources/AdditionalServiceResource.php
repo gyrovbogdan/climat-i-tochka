@@ -19,8 +19,19 @@ class AdditionalServiceResource extends Resource
 {
     protected static ?string $model = AdditionalService::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-wrench';
 
+    protected static ?string $navigationGroup = "Услуги";
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Дополнительные услуги';
+    }
+
+    public static function getPluralLabel(): ?string
+    {
+        return 'Дополнительные услуги';
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -57,15 +68,6 @@ class AdditionalServiceResource extends Resource
         ];
     }
 
-    public static function getNavigationLabel(): string
-    {
-        return 'Дополнительные услуги';
-    }
-
-    public static function getPluralLabel(): ?string
-    {
-        return 'Дополнительные услуги';
-    }
 
     public static function getPages(): array
     {

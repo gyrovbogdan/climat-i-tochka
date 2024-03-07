@@ -10,3 +10,8 @@
 .z-600 {
     z-index: 600;
 }
+
+.sidebar-wrapper {
+    top: 56px;
+    max-width: 280px;
+}

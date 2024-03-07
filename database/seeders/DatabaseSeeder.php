@@ -53,6 +53,6 @@ class DatabaseSeeder extends Seeder
         Contact::create(['name' => 'phoneNumber', 'data' => '+7 (978) 123-45-67']);
         Contact::create(['name' => 'vkGroup', 'data' => 'https://smthing']);
 
-        User::create(['name' => 'admin', 'email' => 'admin@admin.com', 'password' => 'admin']);
+        User::create(['name' => 'admin', 'password' => 'admin']);
     }
 }
