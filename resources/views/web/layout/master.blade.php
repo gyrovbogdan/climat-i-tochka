@@ -9,7 +9,7 @@
         @yield('title', 'Климат и точка Крым')
     </title>
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/app/app.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/app/app.css', 'public/css/app/partials/navbar.css'])
     @stack('stylesheets')
 </head>
 
