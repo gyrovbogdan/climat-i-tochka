@@ -4,11 +4,6 @@
     Услуги
 @endsection
 
-@push('stylesheets')
-    <link rel="stylesheet" href="{{ asset('css/ventilation.css') }}?v1.0">
-@endpush
-
-
 @section('content')
     <div class="container">
         <div class="">

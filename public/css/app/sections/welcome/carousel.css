@@ -44,7 +44,7 @@
 }
 
 .first-image {
-    background-image: url("/images/first-image.jpg?v1.0");
+    background-image: url("/resources/images/first-image.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 40%;
@@ -52,7 +52,7 @@
 
 .second-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-        url("/images/second-image.jpg?v1.0");
+        url("/resources/images/second-image.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 40%;
@@ -60,7 +60,7 @@
 
 .third-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url("/images/third-image.jpg?v1.0");
+        url("/resources/images/third-image.jpg");
     background-size: cover;
     background-position-x: 10%;
     background-position-y: center;

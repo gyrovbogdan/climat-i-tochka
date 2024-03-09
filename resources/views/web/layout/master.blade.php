@@ -9,15 +9,12 @@
         @yield('title', 'Климат и точка Крым')
     </title>
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v1.0">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/app/app.css'])
     @stack('stylesheets')
 </head>
 
 <body>
     <header>
-        @stack('header')
         @include('web.layout.partials.nav')
     </header>
 
@@ -26,8 +23,7 @@
     </main>
 
     @include('web.layout.partials.footer')
-    @section('scripts')
-        <script src="{{ asset('js/app.js') }}"></script>
-    @show
+    <script src="{{ asset('js/app.js') }}"></script>
+    @stack('scripts')
 
 </html>

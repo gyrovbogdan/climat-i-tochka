@@ -13,33 +13,8 @@
     border-color: #007ec7;
 }
 
-.navbar-nav > li > .dropdown-menu {
-    background-color: #0073b7;
-}
-
-.dropdown-item:hover {
-    background-color: #007ec7;
-}
-
 .bg-main {
     background-color: #0073b7;
-}
-
-nav .dropdown-item {
-    color: #d1dcff;
-}
-
-nav .nav-link {
-    color: #d1dcff;
-}
-
-nav .nav-link:hover {
-    color: #fff;
-}
-
-.icon-dot {
-    color: #ed254e !important;
-    font-weight: 900;
 }
 
 .btn-buy {

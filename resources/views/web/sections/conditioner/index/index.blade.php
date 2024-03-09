@@ -5,8 +5,7 @@
 @endsection
 
 @push('stylesheets')
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}?v1.0">
-    <link rel="stylesheet" href="{{ asset('css/conditioner-card.css') }}?v1.0">
+    @vite(['public/css/app/sections/conditioner/index/card.css', 'public/css/app/sections/conditioner/index/sidebar.css'])
 @endpush
 
 @section('content')

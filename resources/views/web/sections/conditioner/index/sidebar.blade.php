@@ -26,7 +26,7 @@
         <form action="{{ route('conditioners.index') }}">
             <section class="input-group my-3">
                 <input type="text" class="form-control" name="search" placeholder="Название кондиционера"
-                    value={{ isset(request()->query()['search']) ? request()->query()['search'] : '' }}
+                    value="{{ isset(request()->query()['search']) ? request()->query()['search'] : '' }}"
                     aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <button class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg"
                         width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

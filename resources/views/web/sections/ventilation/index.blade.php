@@ -5,7 +5,7 @@
 @endsection
 
 @push('stylesheets')
-    <link rel="stylesheet" href="{{ asset('css/ventilation.css') }}?v1.0">
+    @vite('public/css/app/sections/ventilation/app.css')
 @endpush
 
 

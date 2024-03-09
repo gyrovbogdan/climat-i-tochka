@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="h-100 p-5 bg-body-tertiary rounded-3 right-image fw-semibold">
+            <div class="h-100 p-5 bg-body-tertiary rounded-3 right-image fw-semibold mt-3 mt-md-0">
                 <h2 class="text-white">Свежий воздух в вашем доме</h2>
                 <ul class="list-group">
                     <li class="list-group-item  bg-transparent text-white ">Обеспечьте приток свежего воздуха в любое

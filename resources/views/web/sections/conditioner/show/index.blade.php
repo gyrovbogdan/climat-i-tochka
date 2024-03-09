@@ -5,7 +5,7 @@
 @endsection
 
 @push('stylesheets')
-    <link rel="stylesheet" href="{{ asset('css/conditioner-show.css') }}">
+    @vite('public/css/app/sections/conditioner/show/app.css')
 @endpush
 
 @section('content')
