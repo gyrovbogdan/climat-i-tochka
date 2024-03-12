@@ -9,6 +9,10 @@
         @yield('title', 'Климат и точка Крым')
     </title>
 
+    <link rel=”icon” href=”/favicon.ico” type=”image/x-icon”>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/app/app.css', 'public/css/app/partials/navbar.css'])
     @stack('stylesheets')
 </head>

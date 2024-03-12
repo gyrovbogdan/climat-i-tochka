@@ -51,10 +51,10 @@ class ConditionerModelResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Название'),
-                TextColumn::make('area')->label('Площадь помещения'),
-                TextColumn::make('price')->label('Цена')->numeric(),
-                TextColumn::make('promo_price')->label('Акционная цена')->numeric(),
+                TextColumn::make('name')->label('Название')->searchable()->sortable(),
+                TextColumn::make('area')->label('Площадь помещения')->sortable(),
+                TextColumn::make('price')->label('Цена')->numeric()->sortable(),
+                TextColumn::make('promo_price')->label('Акционная цена')->numeric()->sortable(),
             ])
             ->filters([
                 //

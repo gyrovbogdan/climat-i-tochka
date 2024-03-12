@@ -1,9 +1,9 @@
 .navbar-nav > li > .dropdown-menu {
-    background-color: #0073b7;
+    background-color: var(--primary-color);
 }
 
 .dropdown-item:hover {
-    background-color: #007ec7;
+    background-color: var(--primary-hover);
 }
 
 nav .dropdown-item {
@@ -19,6 +19,6 @@ nav .nav-link:hover {
 }
 
 .icon-dot {
-    color: #ed254e !important;
+    color: var(--red) !important;
     font-weight: 900;
 }

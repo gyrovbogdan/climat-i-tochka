@@ -4,9 +4,9 @@
                 src="{{ asset("storage/$image") }}">
         </a>
         @if ($promo_price)
-            <div class="position-absolute ml-auto" style="right: 20px; top: 10px">
+            <div class="position-absolute ml-auto" style="right: 20px; top: 10px; z-index:1000;">
                 <h5>
-                    <span class='badge text-bg-danger bg-red'>
+                    <span class='badge text-bg-danger bg-red bg-gradient'>
                         -{{ (1 - round($promo_price / $price, 2)) * 100 }}%</span>
                 </h5>
             </div>
@@ -39,7 +39,7 @@
 
 
         </div>
-        <a class=" btn btn-buy w-100 rounded-4-bottom fw-semibold"
+        <a class=" btn btn-buy w-100 rounded-4-bottom fw-semibold bg-gradient"
             href="{{ route('conditioners.show', ['conditioner' => $id]) }}">
             Купить за
             @if ($promo_price)

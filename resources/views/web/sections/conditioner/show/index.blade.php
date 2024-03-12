@@ -9,7 +9,7 @@
 @endpush
 
 @section('content')
-    <section class="py-5">
+    <section class="py-3">
         <div class="container">
             <div class="card p-3">
                 <div class="row">

@@ -44,7 +44,8 @@
 }
 
 .first-image {
-    background-image: url("/resources/images/first-image.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url("/resources/images/first-image.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 40%;
@@ -52,10 +53,16 @@
 
 .second-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1) 37%,
+            rgba(0, 0, 0, 0.3) 100%
+        ),
         url("/resources/images/second-image.jpg");
     background-size: cover;
     background-position-x: center;
-    background-position-y: 40%;
+    background-position-y: 30%;
+    color: var(--primary-color);
 }
 
 .third-image {
@@ -64,4 +71,36 @@
     background-size: cover;
     background-position-x: 10%;
     background-position-y: center;
+}
+
+.bg-darkened {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+.conditioner-image {
+    background-image: url("/resources/images/conditioner.png");
+    height: 100%;
+    min-height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.text-danger {
+    color: var(--red) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-area {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 54%
+    );
 }

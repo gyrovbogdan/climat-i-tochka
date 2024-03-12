@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top main-color bg-main fw-bold" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg fixed-top main-color bg-main fw-bold " data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="{{ route('index', false) }}">Климат и Точка Крым <span class=icon-dot>.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"

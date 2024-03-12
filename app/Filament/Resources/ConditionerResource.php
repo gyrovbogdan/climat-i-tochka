@@ -139,10 +139,10 @@ class ConditionerResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Название'),
+                TextColumn::make('name')->label('Название')->searchable()->sortable(),
                 ImageColumn::make('images')->label('Изображения'),
-                TextColumn::make('brand')->label('Марка'),
-                CheckboxColumn::make('inverter')->label('Инвертeр')
+                TextColumn::make('brand')->label('Марка')->sortable(),
+                CheckboxColumn::make('inverter')->label('Инвертeр')->sortable()
             ])
             ->filters([
                 //
