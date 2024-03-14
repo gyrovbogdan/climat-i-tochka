@@ -17,7 +17,8 @@
                     @foreach ($services as $service)
                         <tr>
                             <td>{{ $service['name'] }}</td>
-                            <td>{{ $service['price'] }}</td>
+                            <td>{{ is_numeric($service['price']) ? number_format($serivice['price'], 2, ',', ' ') . '₽' : $service['price'] }}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -49,7 +50,8 @@
                     @foreach ($additionalServices as $service)
                         <tr>
                             <td>{{ $service['name'] }}</td>
-                            <td>{{ $service['price'] }}</td>
+                            <td>{{ is_numeric($service['price']) ? number_format($service['price'], 2, ',', ' ') . ' руб.' : $service['price'] }}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
