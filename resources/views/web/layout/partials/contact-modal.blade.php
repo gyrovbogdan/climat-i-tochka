@@ -42,7 +42,7 @@
                     </a>
                 </div>
                 <div class="input-group mb-3">
-                    <a class="input-group-text btn btn-success bg-gradient" href="{{ $whatsApp }}"
+                    <a class="input-group-text btn btn-buy bg-gradient" href="{{ $whatsApp }}"
                         id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path
