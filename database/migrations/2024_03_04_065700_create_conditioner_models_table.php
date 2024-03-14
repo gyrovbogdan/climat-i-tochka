@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('conditioner_models', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('conditioner_id')->references('id')->on('conditioners');
+            $table->foreignId('conditioner_id')->references('id')->on('conditioners')->onDelete('cascade');
             $table->string('name');
             $table->enum('area', config('global.areas'));
             $table->integer('price');

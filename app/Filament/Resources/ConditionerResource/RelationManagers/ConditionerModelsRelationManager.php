@@ -17,6 +17,7 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\CheckboxColumn;
 use Filament\Forms\Components\TextInput;
+use App\Models\ConditionerModel;
 
 class ConditionerModelsRelationManager extends RelationManager
 {
@@ -35,7 +36,14 @@ class ConditionerModelsRelationManager extends RelationManager
                 TextInput::make('power_input_cold')->label('Потребляемая мощность(холод)'),
                 TextInput::make('power_input_warm')->label('Потребляемая мощность(тепло)'),
                 TextInput::make('indoor_sizes')->label('Размеры внутреннего блока'),
-                Checkbox::make('wi-fi')->label('Wi-Fi')->columnSpanFull()
+                Checkbox::make('wi-fi')->label('Wi-Fi')->columnSpanFull(),
+                Checkbox::make('is_promotional')->label('На главную страницу')
+                    ->afterStateUpdated(function (?string $state, ?string $old) {
+                        if ($state == true) {
+                            ConditionerModel::where('is_promotional', '1')->update(['is_promotional' => false]);
+                        }
+                    })
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -47,6 +55,11 @@ class ConditionerModelsRelationManager extends RelationManager
                 TextColumn::make('area')->label('Площадь помещения'),
                 TextColumn::make('price')->label('Цена')->numeric(),
                 TextColumn::make('promo_price')->label('Акционная цена')->numeric(),
+                CheckboxColumn::make('is_promotional')->label('На главной')->sortable()->beforeStateUpdated(function ($record, $state) {
+                    if ($state == true) {
+                        ConditionerModel::where('is_promotional', '1')->update(['is_promotional' => false]);
+                    }
+                }),
             ])
             ->filters([
                 //

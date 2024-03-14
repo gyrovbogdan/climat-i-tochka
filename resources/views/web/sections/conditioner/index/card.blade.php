@@ -39,8 +39,8 @@
 
 
         </div>
-        <a class=" btn btn-buy w-100 rounded-4-bottom fw-semibold bg-gradient"
-            href="{{ route('conditioners.show', ['conditioner' => $id]) }}">
+        <a class="btn btn-buy w-100 rounded-4-bottom fw-semibold bg-gradient" data-bs-toggle="modal"
+            data-bs-target="#contact-modal" href="{{ route('conditioners.show', ['conditioner' => $id]) }}">
             Купить за
             @if ($promo_price)
                 <strong class="fs-5">{{ number_format($promo_price, 2, ',', ' ') }}₽</strong> <span

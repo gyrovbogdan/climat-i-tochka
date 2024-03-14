@@ -9,7 +9,7 @@
         <p class="col-lg-6 mx-auto mb-4">
             Попробуйте изменить запрос или очистите его.
         </p>
-        <a class="btn btn-primary px-5 mb-5" href="{{ route('conditioners.index') }}">
+        <a class="btn btn-primary px-5 mb-5 bg-gradient" href="{{ route('conditioners.index') }}">
             Очистить
         </a>
     </div>

@@ -43,7 +43,14 @@ class ConditionerModelResource extends Resource
                 TextInput::make('power_input_cold')->label('Потребляемая мощность(холод)'),
                 TextInput::make('power_input_warm')->label('Потребляемая мощность(тепло)'),
                 TextInput::make('indoor_sizes')->label('Размеры внутреннего блока'),
-                Checkbox::make('wi-fi')->label('Wi-Fi')->columnSpanFull()
+                Checkbox::make('wi-fi')->label('Wi-Fi')->columnSpanFull(),
+                Checkbox::make('is_promotional')->label('На главную страницу')
+                    ->afterStateUpdated(function (?string $state, ?string $old) {
+                        if ($state == true) {
+                            ConditionerModel::where('is_promotional', '1')->update(['is_promotional' => false]);
+                        }
+                    })
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -55,6 +62,11 @@ class ConditionerModelResource extends Resource
                 TextColumn::make('area')->label('Площадь помещения')->sortable(),
                 TextColumn::make('price')->label('Цена')->numeric()->sortable(),
                 TextColumn::make('promo_price')->label('Акционная цена')->numeric()->sortable(),
+                CheckboxColumn::make('is_promotional')->label('На главной')->sortable()->beforeStateUpdated(function ($record, $state) {
+                    if ($state == true) {
+                        ConditionerModel::where('is_promotional', '1')->update(['is_promotional' => false]);
+                    }
+                }),
             ])
             ->filters([
                 //

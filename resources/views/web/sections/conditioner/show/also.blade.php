@@ -27,8 +27,9 @@
                                 <p class='text-muted'>{{ $model['area'] }}м. кв.</p>
                             </a>
                             <div class="d-flex justify-content-center">
-                                <div class="btn btn-buy">
-                                    <span class="h6">Заказать за
+                                <div class="btn btn-buy bg-gradient" data-bs-toggle="modal"
+                                    data-bs-target="#contact-modal">
+                                    <span class="h6">Купить за
                                         @if ($model['promo_price'])
                                             <strong
                                                 class="fs-6">{{ number_format($model['promo_price'], 2, ',', ' ') }}₽</strong>

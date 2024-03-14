@@ -73,7 +73,7 @@
             @endforeach
 
             <div class="d-flex justify-content-center">
-                <button class="btn btn-primary w-100 my-3">Поиск
+                <button class="btn btn-primary w-100 my-3 bg-gradient">Поиск
                 </button>
             </div>
         </form>

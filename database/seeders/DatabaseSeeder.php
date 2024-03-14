@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
     {
         Conditioner::factory()->has(ConditionerModel::factory()->count(4))->count(30)->create();
 
+        $promo_model = ConditionerModel::first();
+        $promo_model->is_promotional = true;
+        $promo_model->save();
 
         $services = [
             "Кондиционер, сплит-система (7, 9) до 3 кВт" => "4 000 руб.",
@@ -50,8 +53,16 @@ class DatabaseSeeder extends Seeder
         createServices(Service::class, $services);
         createServices(AdditionalService::class, $additionalServices);
 
-        Contact::create(['name' => 'phoneNumber', 'data' => '+7 (978) 123-45-67']);
-        Contact::create(['name' => 'vkGroup', 'data' => 'https://smthing']);
+        $promo_service = AdditionalService::first();
+        $promo_service->is_promotional = true;
+        $promo_service->save();
+
+
+        Contact::create(['name' => 'phone', 'data' => '+7 (978) 123-45-67']);
+        Contact::create(['name' => 'vk', 'data' => 'https://vk.com/название_группы']);
+        Contact::create(['name' => 'whatsApp', 'data' => 'https://wa.me/номер_телефона']);
+        Contact::create(['name' => 'telegram', 'data' => 'https://telegram.me/имя_пользователя']);
+
 
         User::create(['name' => 'admin', 'password' => 'admin']);
     }

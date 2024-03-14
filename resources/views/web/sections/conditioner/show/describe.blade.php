@@ -40,8 +40,8 @@
 
     </div>
     <div class="d-flex justify-content-center">
-        <div class="my-4 mx-3 btn btn-buy">
-            <span class="h5">Заказать за
+        <div class="my-4 mx-3 btn btn-buy bg-gradient" data-bs-toggle="modal" data-bs-target="#contact-modal">
+            <span class="h5">Купить за
                 @if ($model['promo_price'])
                     <strong class="fs-5">{{ number_format($model['promo_price'], 2, ',', ' ') }}₽</strong>
                     <span class='text-decoration-line-through text-muted'>{!! number_format($model['price'], 2, ',', '&nbsp') !!}₽</span>

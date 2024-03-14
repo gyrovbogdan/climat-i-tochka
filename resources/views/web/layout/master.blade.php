@@ -19,14 +19,24 @@
 
 <body>
     <header>
-        @include('web.layout.partials.nav')
+        @include('web.layout.partials.nav', [
+            'phone' => $contacts['phone'] ?? '',
+            'vk' => $contacts['vk'] ?? '',
+            'whatsApp' => $contacts['whatsApp'] ?? '',
+            'telegram' => $contacts['telegram'] ?? '',
+        ])
     </header>
 
     <main>
         @yield('content')
     </main>
 
-    @include('web.layout.partials.footer')
+    @include('web.layout.partials.footer', [
+        'phone' => $contacts['phone'] ?? '',
+        'vk' => $contacts['vk'] ?? '',
+        'whatsApp' => $contacts['whatsApp'] ?? '',
+        'telegram' => $contacts['telegram'] ?? '',
+    ])
     <script src="{{ asset('js/app.js') }}"></script>
     @stack('scripts')
 

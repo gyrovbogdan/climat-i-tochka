@@ -16,7 +16,8 @@
                 <h2 class="fw-bold text-body-emphasis">Как мы работаем?</h2>
                 <p class="text-body-secondary">Компания "Климат и точка Крым" предлагает комплексные решения по установке
                     систем вентиляции для любых объектов.</p>
-                <a href="#" class="btn btn-primary btn-lg">Заказать расчет</a>
+                <a class="btn btn-primary btn-lg bg-gradient" data-bs-toggle="modal" data-bs-target="#contact-modal">Заказать
+                    расчет</a>
             </div>
 
             <div class="col">
@@ -184,7 +185,8 @@
                     </tr>
                 </tbody>
             </table>
-            <button type="button" class="btn btn-primary my-4">Расчитать стоимость монтажа вентиляции
+            <button type="button" class="btn btn-primary my-4 bg-gradient" data-bs-toggle="modal"
+                data-bs-target="#contact-modal">Расчитать стоимость монтажа вентиляции
                 бесплатно</button>
         </section>
 
@@ -210,7 +212,9 @@
                 <li>Большие габариты приточных установок</li>
                 <li>Высокий уровень шумности</li>
             </ul>
-            <button type="button" class="btn btn-primary">Заказать монтаж приточной системы вентиляции</button>
+            <button type="button" class="btn btn-primary bg-gradient" data-bs-toggle="modal"
+                data-bs-target="#contact-modal">Заказать монтаж приточной системы
+                вентиляции</button>
         </section>
     </div>
 @endsection

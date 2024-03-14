@@ -11,6 +11,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('web.sections.welcome.index', ['model' => ConditionerModel::with('conditioner')->find(7), 'service' => AdditionalService::find(1)]);
+        return view('web.sections.welcome.index', ['model' => ConditionerModel::with('conditioner')->where('is_promotional', true)->first(), 'service' => AdditionalService::where('is_promotional', true)->first()]);
     }
 }

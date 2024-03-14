@@ -20,8 +20,8 @@ class ViewComposerServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->composer(['web.layout.partials.footer', 'ventilation.index'], function ($view) {
-            $view->with('contacts', Contact::get());
+        view()->composer(['web.layout.master', 'ventilation.index'], function ($view) {
+            $view->with('contacts', array_flip(Contact::pluck('name', 'data')->toArray()));
         });
     }
 }

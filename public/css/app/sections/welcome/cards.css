@@ -8,7 +8,7 @@
 
 .right-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/resources/images/second-image.jpg");
+        url("/resources/images/right-image.jpeg");
     background-size: cover;
     background-position-x: center;
     background-position-y: center;

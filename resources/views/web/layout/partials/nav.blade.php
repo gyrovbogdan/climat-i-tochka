@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top main-color bg-main fw-bold " data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg fixed-top main-color bg-main fw-bold bg-gradient" data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="{{ route('index', false) }}">Климат и Точка Крым <span class=icon-dot>.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -19,11 +19,18 @@
                     <a class="nav-link {{ strpos(Route::currentRouteName(), 'ventilations') === 0 ? 'active' : '' }}"
                         href="{{ route('ventilations.index', false) }}">Вентиляция</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                     <a class="nav-link {{ strpos(Route::currentRouteName(), 'services') === 0 ? 'active' : '' }}"
                         href="{{ route('services.index', false) }}">Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contact-modal">
+                        Контакты
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+@include('web.layout.partials.contact-modal')

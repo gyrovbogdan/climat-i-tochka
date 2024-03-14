@@ -14,6 +14,8 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Checkbox;
+use Filament\Tables\Columns\CheckboxColumn;
 
 class AdditionalServiceResource extends Resource
 {
@@ -37,7 +39,14 @@ class AdditionalServiceResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->label('Название'),
-                TextInput::make('price')->label('Цена')
+                TextInput::make('price')->label('Цена'),
+                Checkbox::make('is_promotional')->label('На главную страницу')
+                    ->afterStateUpdated(function (?string $state, ?string $old) {
+                        if ($state == true) {
+                            AdditionalService::where('is_promotional', '1')->update(['is_promotional' => false]);
+                        }
+                    })
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -46,7 +55,12 @@ class AdditionalServiceResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->label('Название'),
-                TextColumn::make('price')->label('Цена')
+                TextColumn::make('price')->label('Цена'),
+                CheckboxColumn::make('is_promotional')->label('На главной')->sortable()->beforeStateUpdated(function ($record, $state) {
+                    if ($state == true) {
+                        AdditionalService::where('is_promotional', '1')->update(['is_promotional' => false]);
+                    }
+                }),
             ])
             ->filters([
                 //

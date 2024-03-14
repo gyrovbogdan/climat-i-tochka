@@ -6,18 +6,10 @@
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
 
-    @php
-        $promo_price = $model['promo_price'];
-        $price = $model['price'];
-        $id = $model['id'];
-        $name = $model['conditioner']['name'];
-        $serviceName = 'Профессиональная чистка кондиционеров';
-        $servicePrice = 3500;
-    @endphp
     <div class="carousel-inner">
 
-        <div class="carousel-item second-image active">
-            <div class="container h-100 px-5">
+        <div class="carousel-item promo-item active">
+            <div class="container h-100 px-5 pb-5">
                 <div class="row h-100">
                     <div class="col-lg-6">
                         <div class="d-flex w-100 h-100 justify-content-center">
@@ -30,32 +22,40 @@
                             <div class="card bg-transparent bg-darkened bg-blur border-white">
                                 <h2
                                     class="text-white fw-semibold bg-danger bg-gradient card-img-top border-bottom border-white py-1">
-                                    @if ($promo_price)
+                                    @if (isset($model['promo_price']))
                                         СКИДКА
                                         <span class=''>
-                                            -{{ (1 - round($promo_price / $price, 2)) * 100 }}%</span>
+                                            -{{ (1 - round($model['promo_price'] / $model['price'], 2)) * 100 }}%</span>
+                                    @else
+                                        <span class=''>ХИТ-ПРОДАЖ!</span>
                                     @endif
                                 </h2>
                                 <div class="card-body">
                                     <h1 class="rounded-4-bottom fw-semibold text-danger ">
-                                        @if ($promo_price)
+                                        @if (isset($model['promo_price']))
                                             <span class='text-decoration-line-through text-light fs-2'>
-                                                {!! number_format($price, 2, ',', '&nbsp;') !!}₽
+                                                {!! number_format($model['price'], 2, ',', '&nbsp;') !!}₽
                                             </span>
                                             <strong class="">
-                                                {!! number_format($promo_price, 2, ',', '&nbsp;') !!}₽
+                                                {!! number_format($model['promo_price'], 2, ',', '&nbsp;') !!}₽
                                             </strong>
                                         @else
-                                            <strong class="fs-3">{{ number_format($price, 2, ',', ' ') }}₽</strong>
+                                            @if (isset($model['price']))
+                                                <strong
+                                                    class="fs-3">{{ number_format($model['price'], 2, ',', ' ') }}₽</strong>
+                                            @endif
                                         @endif
                                     </h1>
                                     <div class="">
-                                        <h3 class="mx-auto text-light">{{ $name }}
+                                        <h3 class="mx-auto text-light fs-5">
+                                            {{ $model['conditioner']['name'] ?? '-' }}
                                         </h3>
                                     </div>
                                     <div>
-                                        <a href="{{ route('conditioners.show', ['conditioner' => $id]) }}"
-                                            class="btn btn-lg btn-outline-light my-2">Подробнее</a>
+                                        @if (isset($model['id']))
+                                            <a href="{{ route('conditioners.show', ['conditioner' => $model['id']]) }}"
+                                                class="btn btn-lg btn-outline-light my-2">Подробнее</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -65,24 +65,36 @@
             </div>
         </div>
 
-        <div class="carousel-item first-image">
+        <div class="carousel-item service-item">
             <div class="container">
                 <div class="carousel-caption text-start">
-                    <h2>{{ $serviceName }}</h2>
-                    <p class="caption-text fw-semibold fs-1 text-danger">
-                        {{ number_format($servicePrice, 2, ',', ' ') }}₽</p>
-                    <p><a class="btn btn-lg btn-outline-light bg-blur" href="{{ route('conditioners.index') }}">
-                            Заказать</a></p>
+                    <div class="card-body">
+                        <h1 class="text-white">{{ $service['name'] ?? '-' }}</h1>
+                        <h1 class="rounded-4-bottom fw-semibold text-danger ">
+                            @if (isset($service['price']))
+                                {!! is_numeric($service['price']) ? number_format($service['price'], 2, ',', '&nbsp;') : $service['price'] !!}₽
+                            @endif
+                        </h1>
+                        <div class="">
+                            <h3 class="mx-auto text-light fs-5">Дышите легко!
+                            </h3>
+                        </div>
+                        <div>
+                            <a class="btn btn-lg btn-outline-light my-2" data-bs-toggle="modal"
+                                data-bs-target="#contact-modal">Подробнее</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="carousel-item third-image">
+        <div class="carousel-item conditioners-item">
             <div class="container">
-                <div class="carousel-caption text-end">
-                    <h1>Дышите легко!</h1>
-                    <p class="caption-text fw-semibold ml-auto">Очистка и дезинфекция систем вентиляции.</p>
-                    <p><a class="btn btn-lg btn-light" href="{{ route('conditioners.index') }}">Заказать чистку</a>
+                <div class="carousel-caption text-center d-flex flex-column align-items-center">
+                    <h1>Установка кондиционера</h1>
+                    <p class="caption-text fw-semibold">Для любых целей и под любой кошелек</p>
+                    <p><a class="btn btn-lg btn-light" href="{{ route('conditioners.index') }}">Посмотреть
+                            кондиционеры</a>
                     </p>
                 </div>
             </div>
