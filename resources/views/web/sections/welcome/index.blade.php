@@ -1,5 +1,8 @@
 @extends('web.layout.master')
 
+@section('title')
+    Кондиционеры в Симферополе | Продажа, установка, ремонт | Климат и Точка Крым
+@endsection
 
 @push('stylesheets')
     @vite(['public/css/app/sections/welcome/cards.css', 'public/css/app/sections/welcome/carousel.css', 'public/css/app/sections/welcome/features.css'])

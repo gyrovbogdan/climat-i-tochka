@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        @yield('title', 'Климат и точка Крым')
+        @yield('title', 'Кондиционеры в Симферополе | Продажа, установка, ремонт | Купить кондиционер | Установить кондиционер | Недорогие кондиционеры | Климат и Точка Крым')
     </title>
+
+    <meta property="og:title" content="Климат и точка Крым" />
+    <meta property="og:description" content="@yield('og:description', 'Продажа и установка кондиционеров в Симферополе. Большой выбор кондиционеров по доступным ценам. Профессиональная установка и сервисное обслуживание.')" />
+    <meta property="og:image" content="{{ asset('/resources/images/service-image.jpg') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content= "{{ env('APP_URL') }}" />
 
     <link rel=”icon” href=”/favicon.ico” type=”image/x-icon”>
     <link rel="preconnect" href="https://fonts.googleapis.com">
