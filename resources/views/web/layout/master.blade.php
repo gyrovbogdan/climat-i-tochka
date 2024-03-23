@@ -14,7 +14,7 @@
     <meta property="og:description"
         content="Продажа и установка кондиционеров в Симферополе. Большой выбор кондиционеров по доступным ценам. Профессиональная установка и сервисное обслуживание.">
     <meta property="og:url" content="https://co44321.tw1.ru">
-    <meta property="og:image" content="https://co44321.tw1.ru/resources/images/service-image.jpg">
+    <meta property="og:image" content="{{ asset('build/assets/service-image-DbIJZEXz.jpg') }}">
     <meta property="og:site_name" content="Климат и точка Крым">
     <meta property="og:locale" content="ru_RU">
 
