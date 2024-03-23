@@ -1,4 +1,12 @@
-USE climat;
+DELETE FROM contacts;
+ALTER TABLE contasts AUTO_INCREMENT = 1;
+
+INSERT INTO contacts (name, data)
+VALUES 
+    ('phone', '+7 (978) 123-45-67'),
+    ('vk', 'https://vk.com/название_группы'),
+    ('whatApp', 'https://wa.me/номер_телефона'),
+    ('telegram', 'https://telegram.me/имя_пользователя');
 
 DELETE FROM conditioners;
 ALTER TABLE conditioners AUTO_INCREMENT = 1;
