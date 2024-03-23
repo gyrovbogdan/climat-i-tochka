@@ -1,5 +1,6 @@
 <button class="btn btn-outline-dark fixed-top z-600 bg-white" style="top:66px; left:10px; width:40px" type="button"
-    data-bs-toggle="collapse" data-bs-target="#collapse-sidebar" aria-expanded="false" aria-controls="collapse-sidebar">
+    aria-label="open-sidebar" data-bs-toggle="collapse" data-bs-target="#collapse-sidebar" aria-expanded="false"
+    aria-controls="collapse-sidebar">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter"
         viewBox="0 0 16 16">
         <path

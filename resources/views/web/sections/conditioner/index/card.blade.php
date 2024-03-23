@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-center ">
     <figure class="card card-product-grid card-lg rounded-4"> <a
             href="{{ route('conditioners.show', ['conditioner' => $id]) }}" class="img-wrap" data-abc="true"> <img
-                src="{{ asset("storage/$image") }}">
+                src="{{ asset("storage/$image") }}" alt='conditioner-image'>
         </a>
         @if ($promo_price)
             <div class="position-absolute ml-auto" style="right: 20px; top: 10px; z-index:1000;">
@@ -13,7 +13,8 @@
         @endif
         <figcaption class="info-wrap text-center">
             <div class='card-text'>
-                <a href="{{ route('conditioners.show', ['conditioner' => $id]) }}" class="title" data-abc="true">
+                <a href="{{ route('conditioners.show', ['conditioner' => $id]) }}" class="title" data-abc="true"
+                    aria-label="goto-{{ $name }}">
                     <h5>{{ $name }}</h5>
                 </a>
             </div>
