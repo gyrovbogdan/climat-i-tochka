@@ -142,7 +142,7 @@ class ConditionerResource extends Resource
                 TextColumn::make('name')->label('Название')->searchable()->sortable(),
                 ImageColumn::make('images')->label('Изображения'),
                 TextColumn::make('brand')->label('Марка')->sortable(),
-                CheckboxColumn::make('inverter')->label('Инвертeр')->sortable()
+                CheckboxColumn::make('inverter')->label('Инвертeр')->sortable(),
             ])
             ->filters([
                 //

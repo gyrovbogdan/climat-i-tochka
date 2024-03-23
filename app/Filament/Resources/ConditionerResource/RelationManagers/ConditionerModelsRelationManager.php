@@ -51,8 +51,8 @@ class ConditionerModelsRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Название'),
-                TextColumn::make('area')->label('Площадь помещения'),
+                TextColumn::make('name')->label('Название')->url(fn (ConditionerModel $model) => route('conditioners.show', ['conditioner' => $model['id']])),
+                TextColumn::make('area')->label('Площадь помещения')->sortable(),
                 TextColumn::make('price')->label('Цена')->numeric(),
                 TextColumn::make('promo_price')->label('Акционная цена')->numeric(),
                 CheckboxColumn::make('is_promotional')->label('На главной')->sortable()->beforeStateUpdated(function ($record, $state) {

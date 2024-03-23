@@ -167,11 +167,13 @@ return [
         // App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         // App\Providers\EventServiceProvider::class,
+
         App\Providers\ViewComposerServiceProvider::class,
         App\Providers\UnguardConditionerServiceProvider::class,
         App\Providers\UseBootstrapPaginatorServiceProvider::class,
         App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\Filament\AppPanelProvider::class,
+        App\Providers\Filament\FilamentServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     ])->toArray(),
 

@@ -47,8 +47,8 @@
                             <span class="page-link" aria-hidden="true">&lsaquo;</span>
                         </li>
                     @else
-                        <li class="page-item">
-                            <a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev"
+                        <li class="page-item bg-gradient">
+                            <a class="page-link " href="{{ $paginator->previousPageUrl() }}" rel="prev"
                                 aria-label="@lang('pagination.previous')">&lsaquo;</a>
                         </li>
                     @endif

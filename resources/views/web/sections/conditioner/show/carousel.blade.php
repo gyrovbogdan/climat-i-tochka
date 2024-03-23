@@ -1,4 +1,5 @@
-<div id="carouselExampleIndicators" class="carousel carousel-dark border slide bg-white" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel carousel-dark border slide bg-white h-100 w-100"
+    data-bs-ride="carousel" style="min-height: 300px">
     <div class="carousel-indicators">
         @foreach ($images as $key => $image)
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $key }}"
@@ -6,11 +7,12 @@
                 aria-label="Slide {{ $key }}"></button>
         @endforeach
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner w-100 h-100">
         @foreach ($images as $key => $image)
-            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-                <img src="{{ asset("storage/$image") }}" class="d-block w-100" alt=""
-                    style="max-height: 500px; max-width: 500px">
+            <div class="carousel-item w-100 h-100 {{ $key === 0 ? 'active' : '' }}">
+                <div class="d-block w-100 h-100 carousel-image"
+                    style="background-image: url('{{ asset("storage/$image") }}')">
+                </div>
             </div>
         @endforeach
     </div>

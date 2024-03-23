@@ -58,7 +58,7 @@ class ConditionerModelResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Название')->searchable()->sortable(),
+                TextColumn::make('name')->label('Название')->searchable()->sortable()->url(fn (ConditionerModel $model) => route('conditioners.show', ['conditioner' => $model['id']])),
                 TextColumn::make('area')->label('Площадь помещения')->sortable(),
                 TextColumn::make('price')->label('Цена')->numeric()->sortable(),
                 TextColumn::make('promo_price')->label('Акционная цена')->numeric()->sortable(),
@@ -67,6 +67,7 @@ class ConditionerModelResource extends Resource
                         ConditionerModel::where('is_promotional', '1')->update(['is_promotional' => false]);
                     }
                 }),
+
             ])
             ->filters([
                 //

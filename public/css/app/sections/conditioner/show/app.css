@@ -21,3 +21,10 @@
 #pills-tab li .active {
     color: #0073b7 !important;
 }
+
+.carousel-image {
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
