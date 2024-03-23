@@ -9,12 +9,12 @@
         @yield('title', 'Кондиционеры в Симферополе | Продажа, установка, ремонт | Купить кондиционер | Установить кондиционер | Недорогие кондиционеры | Климат и Точка Крым')
     </title>
 
+    <meta property="decription" content="@yield('description', 'Продажа и установка кондиционеров в Симферополе. Большой выбор кондиционеров по доступным ценам. Бесплатная доставка и установка. Опытные монтажники. Гарантия на все работы.')">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Кондиционеры в Симферополе | Продажа, установка, ремонт | Климат и Точка Крым">
-    <meta property="og:description"
-        content="Продажа и установка кондиционеров в Симферополе. Большой выбор кондиционеров по доступным ценам. Профессиональная установка и сервисное обслуживание.">
-    <meta property="og:url" content="https://co44321.tw1.ru">
-    <meta property="og:image" content="{{ asset('build/assets/service-image-DbIJZEXz.jpg') }}">
+    <meta property="og:title" content="@yield('og:title', 'Кондиционеры в Симферополе | Продажа, установка, ремонт | Климат и Точка Крым')">
+    <meta property="og:description" content="@yield('og:description', 'Продажа и установка кондиционеров в Симферополе. Большой выбор кондиционеров по доступным ценам. Профессиональная установка и сервисное обслуживание.')">
+    <meta property="og:url" content="@yield('og:url', 'https://co44321.tw1.ru')">
+    <meta property="og:image" content="{{ asset('/resources/images/conditioner.png') }}">
     <meta property="og:site_name" content="Климат и точка Крым">
     <meta property="og:locale" content="ru_RU">
 
