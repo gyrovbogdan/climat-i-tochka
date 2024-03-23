@@ -7,7 +7,7 @@
 @section('content')
     <div class="container">
         <div class="">
-            <h4 class="py-4 text-center"> Стоимость монтажа:</h4>
+            <h1 class="py-4 text-center h4"> Стоимость монтажа:</h1>
             <table class="table table-striped fw-semibold">
                 <thead>
                     <td class="fs-5">Услуга</td>
@@ -35,9 +35,9 @@
         </div>
 
         <div class="pb-5">
-            <h4 class="py-4 text-center">Дополнительные услуги:</h4>
-            <h6 class="mt-4 px-2">Мы предлагаем широкий спектр услуг: от стандартной установки до сложных монтажных
-                работ.</h6>
+            <h2 class="py-4 text-center h4">Дополнительные услуги:</h2>
+            <h3 class="mt-4 px-2 h6">Мы предлагаем широкий спектр услуг: от стандартной установки до сложных монтажных
+                работ.</h3>
 
             <table class="table table-striped fw-semibold">
                 <thead>
