@@ -11,17 +11,17 @@
                             <div class="img-wrap">
                                 <a href="{{ route('conditioners.show', ['conditioner' => $model['id']]) }}"
                                     data-abc="true">
-                                    <img
-                                        src="{{ asset('storage/' . ($conditioner['images'][0] ?? 'placeholder.jpg')) }}">
+                                    <img src="{{ asset('storage/' . ($conditioner['images'][0] ?? 'placeholder.jpg')) }}"
+                                        alt="conditioner-image">
                                 </a>
                             </div>
                         </div>
                         <div class="info fw-semibold">
                             <a href="{{ route('conditioners.show', ['conditioner' => $model['id']]) }}"
-                                class="nav-link mb-1">
+                                class="nav-link mb-1" aria-label="goto-{{ $model['name'] }}">
                                 {{ $conditioner['name'] . ' ' . $model['name'] }}
                             </a>
-                            <a class='d-flex justify-content-between'
+                            <a class='d-flex justify-content-between' aria-label="goto-{{ $model['name'] }}"
                                 href="{{ route('conditioners.index', ['area[]' => $model['area']]) }}">
                                 <p class='text-muted'>Площадь</p>
                                 <p class='text-muted'>{{ $model['area'] }}м. кв.</p>
