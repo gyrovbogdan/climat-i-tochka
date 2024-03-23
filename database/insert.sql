@@ -1,5 +1,5 @@
 DELETE FROM contacts;
-ALTER TABLE contasts AUTO_INCREMENT = 1;
+ALTER TABLE contacts AUTO_INCREMENT = 1;
 
 INSERT INTO contacts (name, data)
 VALUES 
