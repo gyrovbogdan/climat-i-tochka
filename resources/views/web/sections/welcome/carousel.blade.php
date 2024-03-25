@@ -1,4 +1,4 @@
-<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+<section id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
             aria-label="Slide 1"></button>
@@ -20,8 +20,8 @@
                     <div class="col-lg-6 d-flex justify-content-center">
                         <div class="text-center d-flex justify-content-lg-center flex-column">
                             <div class="card bg-transparent bg-darkened bg-blur border-white">
-                                <h2
-                                    class="text-white fw-semibold bg-danger bg-gradient card-img-top border-bottom border-white py-1">
+                                <h1
+                                    class="text-white fw-semibold bg-danger bg-gradient card-img-top border-bottom border-white h2 py-1">
                                     @if (isset($model['promo_price']))
                                         СКИДКА
                                         <span class=''>
@@ -29,7 +29,7 @@
                                     @else
                                         <span class=''>ХИТ-ПРОДАЖ!</span>
                                     @endif
-                                </h2>
+                                </h1>
                                 <div class="card-body">
                                     <h1 class="rounded-4-bottom fw-semibold text-danger ">
                                         @if (isset($model['promo_price']))
@@ -47,9 +47,9 @@
                                         @endif
                                     </h1>
                                     <div class="">
-                                        <h3 class="mx-auto text-light fs-5">
+                                        <h1 class="mx-auto text-light h3 fs-5">
                                             {{ $model['conditioner']['name'] ?? '-' }}
-                                        </h3>
+                                        </h1>
                                     </div>
                                     <div>
                                         @if (isset($model['id']))
@@ -75,13 +75,13 @@
                                 {!! is_numeric($service['price']) ? number_format($service['price'], 2, ',', '&nbsp;') : $service['price'] !!}₽
                             @endif
                         </h1>
-                        <div class="">
-                            <h3 class="mx-auto text-light fs-5">Дышите легко!
-                            </h3>
+                        <div>
+                            <p class="mx-auto text-light h3 fs-5">Дышите легко!
+                            </p>
                         </div>
                         <div>
-                            <a class="btn btn-lg btn-outline-light my-2" data-bs-toggle="modal"
-                                data-bs-target="#contact-modal">Подробнее</a>
+                            <button class="btn btn-lg btn-outline-light my-2" data-bs-toggle="modal"
+                                data-bs-target="#contact-modal">Подробнее</и>
                         </div>
                     </div>
                 </div>
@@ -108,4 +108,4 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
-</div>
+</section>
