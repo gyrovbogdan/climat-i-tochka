@@ -1,7 +1,17 @@
 @extends('web.layout.master')
 
 @section('title')
-    Кондиционер {{ $model['conditioner']['brand'] }}
+    Купить {{ $model['conditioner']['brand'] }} в Симферополе недорого | Установка кондиционеров | Климат и Точка Крым
+@endsection
+
+@section('meta')
+    @include('web.layout.partials.meta', [
+        'description' =>
+            'Установка кондиционеров в Крыму - широкий выбор сплит-систем по доступным ценам. Профессиональная установка. Официальная гарантия.',
+        'ogTitle' => "Купить {$model['conditioner']['brand']} в Симферополе недорого | Установка кондиционеров | Климат и Точка Крым",
+        'ogDescription' => 'Установка кондиционеров в Крыму - широкий выбор сплит-систем по доступным ценам.',
+        'ogUrl' => env('APP_URL') . '/conditioners',
+    ])
 @endsection
 
 @push('stylesheets')
@@ -26,7 +36,6 @@
                 </div>
             </div>
         </div>
-        <!-- content -->
 
         <section class=" border-top py-4 my-4">
             <div class="container">
