@@ -21,7 +21,7 @@
                                 class="nav-link mb-1" aria-label="goto-{{ $model['name'] }}">
                                 {{ $conditioner['name'] . ' ' . $model['name'] }}
                             </a>
-                            <a class='d-flex justify-content-between' aria-label="goto-{{ $model['name'] }}"
+                            <a class='d-flex justify-content-between my-2' aria-label="goto-{{ $model['name'] }}"
                                 href="{{ route('conditioners.index', ['area[]' => $model['area']]) }}">
                                 <p class='text-muted'>Площадь</p>
                                 <p class='text-muted'>{{ $model['area'] }}м. кв.</p>
