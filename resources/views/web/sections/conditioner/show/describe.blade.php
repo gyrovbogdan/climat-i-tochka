@@ -11,28 +11,28 @@
 
     <hr>
     <div class="fw-medium">
-        <a class='d-flex justify-content-between'
+        <a class='d-flex justify-content-between my-1'
             href="{{ route('conditioners.index', ['brand[]' => $model['conditioner']['brand']]) }}">
             <p class='text-muted'>Марка</p>
             <p class='text-muted'>{{ $model['conditioner']['brand'] }}</p>
         </a>
-        <a class='d-flex justify-content-between'
+        <a class='d-flex justify-content-between my-1'
             href="{{ route('conditioners.index', ['area[]' => $model['conditioner']['area']]) }}">
             <p class='text-muted'>Площадь</p>
             <p class='text-muted'>{{ $model['area'] }} м. кв.</p>
         </a>
-        <a class='d-flex justify-content-between'
+        <a class='d-flex justify-content-between my-1'
             href="{{ route('conditioners.index', ['type[]' => $model['conditioner']['type']]) }}">
             <p class='text-muted'>Тип установки</p>
             <p class='text-muted'>{{ $model['conditioner']['type'] }}</p>
         </a>
-        <a class='d-flex justify-content-between'
+        <a class='d-flex justify-content-between my-1'
             href="{{ route('conditioners.index', ['invertor' => $model['conditioner']['invertor']]) }}">
             <p class='text-muted'>Инвертор</p>
             <p class='text-muted'>{{ $model['conditioner']['invertor'] ? 'Да' : 'Нет' }}</p>
         </a>
 
-        <div class='d-flex justify-content-between'>
+        <div class='d-flex justify-content-between my-1'>
             <p class='text-muted'>Страна</p>
             <p class='text-muted'>{{ $model['conditioner']['country'] }}</p>
         </div>
