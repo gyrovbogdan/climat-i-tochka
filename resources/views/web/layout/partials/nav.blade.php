@@ -24,9 +24,9 @@
                         href="{{ route('services.index', false) }}">Услуги</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contact-modal">
+                    <button class="nav-link" data-bs-toggle="modal" data-bs-target="#contact-modal">
                         Контакты
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
