@@ -20,19 +20,22 @@
             </div>
         </figcaption>
         <div class="card-body fw-semibold">
-            <a class='d-flex justify-content-between' href="{{ route('conditioners.index', ['brand' => [$brand]]) }}">
+            <a class='d-flex justify-content-between my-1'
+                href="{{ route('conditioners.index', ['brand' => [$brand]]) }}">
                 <p class='text-muted'>Марка</p>
                 <p class='text-muted fw-medium'>{{ $brand }}</p>
             </a>
-            <a class='d-flex justify-content-between' href="{{ route('conditioners.index', ['area' => [$area]]) }}">
+            <a class='d-flex justify-content-between my-1'
+                href="{{ route('conditioners.index', ['area' => [$area]]) }}">
                 <p class='text-muted'>Площадь</p>
                 <p class='text-muted fw-medium'>{{ $area }} м. кв.</p>
             </a>
-            <a class='d-flex justify-content-between' href="{{ route('conditioners.index', ['type' => [$type]]) }}">
+            <a class='d-flex justify-content-between my-1'
+                href="{{ route('conditioners.index', ['type' => [$type]]) }}">
                 <p class='text-muted'>Тип</p>
                 <p class='text-muted fw-medium'>{{ $type }}</p>
             </a>
-            <a class='d-flex justify-content-between'
+            <a class='d-flex justify-content-between my-1'
                 href="{{ route('conditioners.index', ['invertor' => [$invertor]]) }}">
                 <p class='text-muted'>Инвертор</p>
                 <p class='text-muted fw-medium'>{{ $type ? 'Да' : 'Нет' }}</p>
