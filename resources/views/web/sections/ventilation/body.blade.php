@@ -4,8 +4,9 @@
             <h2 class="fw-bold text-body-emphasis">Как мы работаем?</h2>
             <p class="text-body-secondary">Компания "Климат и точка Крым" предлагает комплексные решения по установке
                 систем вентиляции для любых объектов.</p>
-            <a class="btn btn-primary btn-lg bg-gradient" data-bs-toggle="modal" data-bs-target="#contact-modal">Заказать
-                расчет</a>
+            <button class="btn btn-primary btn-lg bg-gradient" data-bs-toggle="modal"
+                data-bs-target="#contact-modal">Заказать
+                расчет</button>
         </div>
 
         <div class="col">
