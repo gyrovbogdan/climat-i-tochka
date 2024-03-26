@@ -62,15 +62,15 @@ VALUES
 /* 10 */ 
     ('Сплит-системы Бирюса серия Safiri INVERTER', '["/biryusa/biryusa-energy-0.jpg", "/biryusa/biryusa-energy-1.jpg", "/biryusa/biryusa-energy-2.jpg", "/biryusa/biryusa-energy-3.jpg", "/biryusa/biryusa-energy-4.jpg"]', 'Бирюса', 'Россия', 'Кондиционер Бирюса SAFARI - это высококачественное устройство с использованием передовых технологий для обеспечения комфортной атмосферы в помещении. Он оснащен мощным и эффективным компрессором GMCC-Toshiba, который обеспечивает быстрое охлаждение и обогрев воздуха. Кондиционер имеет 5 режимов работы, включая охлаждение, обогрев, осушение, вентиляцию и авто, что делает его идеальным для использования в любых условиях. Удобный русифицированный пульт дистанционного управления обеспечивает легкое управление всеми функциями кондиционера, а функция 4D-Air flow автоматически качает жалюзи вверх-вниз и вправо-влево, обеспечивая равномерное распределение воздуха в помещении.', 'Настенный', 1);
 
-INSERT INTO conditioner_models (conditioner_id, name, area, price, promo_price, performance_warm, performance_cold, power_input_cold, power_input_warm, indoor_sizes) 
+INSERT INTO conditioner_models (conditioner_id, name, area, price, promo_price, performance_warm, performance_cold, power_input_cold, power_input_warm, indoor_sizes, is_promotional) 
 VALUES
-    (1, 'B-07FPR/B-07FPQ', '20', 29990, 14760, 2.2, 2.1, 0.65, 0.61, '690x199x283'),
-    (1, 'B-09FPR/B-09FPQ', '21 - 25',  31990, 16440, 2.7, 2.65, 0.825, 0.748, '690x199x283'),
-    (1, 'B-12FPR/B-12FPQ', '26 - 35',  41990, 22320, 3.65, 3.55, 1.106, 1.011, '750x200x285'),
-    (1, 'B-18FPR/B-18FPQ', '36 - 50',  67990, 35280, 5.45, 5.3, 1.656, 1.509, '900х225х310'),
-    (1, 'B-24FPR/B-24FPQ', '51 - 70',  82990, 45840, 7.1, 7, 2.325, 2.211, '900x225x310'),
-    (1, 'B-30FPR/B-30FPQ', '71 - 100', 99990, 53640, NULL, NULL, NULL, NULL, '1082x233x330'),
-    (1, 'B-36FPR/B-36FPQ', '101 - 120', 109990, 64200, NULL, NULL, NULL, NULL, '1082x233x330');
+    (1, 'B-07FPR/B-07FPQ', '20', 29990, 14760, 2.2, 2.1, 0.65, 0.61, '690x199x283', 1),
+    (1, 'B-09FPR/B-09FPQ', '21 - 25',  31990, 16440, 2.7, 2.65, 0.825, 0.748, '690x199x283', 0),
+    (1, 'B-12FPR/B-12FPQ', '26 - 35',  41990, 22320, 3.65, 3.55, 1.106, 1.011, '750x200x285', 0),
+    (1, 'B-18FPR/B-18FPQ', '36 - 50',  67990, 35280, 5.45, 5.3, 1.656, 1.509, '900х225х310', 0),
+    (1, 'B-24FPR/B-24FPQ', '51 - 70',  82990, 45840, 7.1, 7, 2.325, 2.211, '900x225x310', 0),
+    (1, 'B-30FPR/B-30FPQ', '71 - 100', 99990, 53640, NULL, NULL, NULL, NULL, '1082x233x330', 0),
+    (1, 'B-36FPR/B-36FPQ', '101 - 120', 109990, 64200, NULL, NULL, NULL, NULL, '1082x233x330', 0);
      
 INSERT INTO conditioner_models (conditioner_id, name, area, price, promo_price, performance_warm, performance_cold, power_input_cold, power_input_warm, indoor_sizes)
 VALUES
@@ -193,23 +193,25 @@ Midea
 INSERT INTO conditioners (name, images, brand, country, description, type, inverter) 
 VALUES
 /* 15 */
-('Сплит-системы Midea серии PARAMOUNT On/off', '["/midea/midea-paramount-0.webp", "/midea/midea-paramount-1.webp", "/midea/midea-paramount-2.webp"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы Midea серии PARAMOUNT On/off', '["/midea/midea-paramount-0.webp", "/midea/midea-paramount-1.webp", "/midea/midea-paramount-2.webp"]', 'Midea', 'Китай', 'Сплит системы настенного типа Midea серии Paramount имеют эффективно работают на охлаждение и обогрев в пространствах площадью от 23 до 70 кв.м. Область применения сплит систем: жилые квартиры, загородные дома, офисные помещения, гостиницы, образовательные учреждения, торговые залы и т.д. Кондиционеры работают на хладагенте R410A.
+Внутренний блок белого цвета выполнен в классическом дизайн. Серия включает пять комплектов мощностью от 2.3 до 7.0 кВт.', 'Настенный', 0),
 /* 16 */
-('Сплит-системы Midea серии PARAMOUNT Inverter', '["/midea/midea-paramount-0.webp", "/midea/midea-paramount-1.webp", "/midea/midea-paramount-2.webp"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы Midea серии PARAMOUNT Inverter', '["/midea/midea-paramount-0.webp", "/midea/midea-paramount-1.webp", "/midea/midea-paramount-2.webp"]', 'Midea', 'Китай', 'Сплит системы настенного типа Midea серии Paramount имеют эффективно работают на охлаждение и обогрев в пространствах площадью от 23 до 70 кв.м. Область применения сплит систем: жилые квартиры, загородные дома, офисные помещения, гостиницы, образовательные учреждения, торговые залы и т.д. Кондиционеры работают на хладагенте R410A.
+Внутренний блок белого цвета выполнен в классическом дизайн. Серия включает пять комплектов мощностью от 2.3 до 7.0 кВт.', 'Настенный', 0),
 /* 17 */
-('Сплит-системы Midea PRIMARY On/off', '["/midea/midea-primary-0.webp", "/midea/midea-primary-1.webp", "/midea/midea-primary-2.webp", "/midea/midea-primary-3.webp"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы Midea PRIMARY On/off', '["/midea/midea-primary-0.webp", "/midea/midea-primary-1.webp", "/midea/midea-primary-2.webp", "/midea/midea-primary-3.webp"]', 'Midea', 'Китай', 'Новинка 2023 г. кондиционер Midea серии PRIMARY от признанного мирового лидера производителя кондиционеров. Современный дизайн, наличие основных функций, надежность. Идеальное соотношение мощности потребления и производительность, позволяющее с легкостью охладить ( обогреть ) помещение. Возможность опционально подключить WiFi управление с телефона (опция).', 'Настенный', 0),
 /* 18 */
-('Сплит-системы Midea PRIMARY Inverter', '["/midea/midea-primary-0.webp", "/midea/midea-primary-1.webp", "/midea/midea-primary-2.webp", "/midea/midea-primary-3.webp"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы Midea PRIMARY Inverter', '["/midea/midea-primary-0.webp", "/midea/midea-primary-1.webp", "/midea/midea-primary-2.webp", "/midea/midea-primary-3.webp"]', 'Midea', 'Китай', 'Новинка 2023 г. кондиционер Midea серии PRIMARY от признанного мирового лидера производителя кондиционеров. Современный дизайн, наличие основных функций, надежность. Идеальное соотношение мощности потребления и производительность, позволяющее с легкостью охладить ( обогреть ) помещение. Возможность опционально подключить WiFi управление с телефона (опция).', 'Настенный', 0),
 /* 19 */
-('Midea GAIA (MSCA) Inverter С ПРИТОКОМ СВЕЖЕГО ВОЗДУХА', '["/midea/midea-breezeless-0.webp", "/midea/midea-breezeless-1.webp", "/midea/midea-breezeless-2.webp", "/midea/midea-breezeless-3.webp"]', 'Midea', 'Китай', 'Описание...', 'Настенный', 1),
+('Midea GAIA (MSCA) Inverter С ПРИТОКОМ СВЕЖЕГО ВОЗДУХА', '["/midea/midea-breezeless-0.webp", "/midea/midea-breezeless-1.webp", "/midea/midea-breezeless-2.webp", "/midea/midea-breezeless-3.webp"]', 'Midea', 'Китай', 'Кондиционер с функцией притока очищенного атмосферного воздуха. Жалюзи с технологией Breezeless™ мягко распределяют воздушный поток, наполненный кислородом. Инверторные технологии для экономии электроэнергии. При любых условиях инверторные компрессоры Midea работают мощно, эффективно и стабильно.', 'Настенный', 1),
 /* 20 */
-('Сплит-системы Midea BREEZELESS (MSFA)  Inverter ', '["/midea/midea-breezeless-0.webp", "/midea/midea-breezeless-1.webp", "/midea/midea-breezeless-2.webp", "/midea/midea-breezeless-3.webp"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы Midea BREEZELESS (MSFA)  Inverter ', '["/midea/midea-breezeless-0.webp", "/midea/midea-breezeless-1.webp", "/midea/midea-breezeless-2.webp", "/midea/midea-breezeless-3.webp"]', 'Midea', 'Китай', 'Серия Midea Breezeless, одноимённая технологией деликатного распределения воздуха, представлена моделями производительностью 2,64 и 3,52 кВт и может применяться в составе как сплит-, так и мульти-сплит-систем. Конструктивной особенностью внутреннего блока являются S-образные диффузоры, расположенные на боковых панелях. Благодаря ним воздух распределяется в трёх направлениях, создавая эффект 3D-охлаждения, нивелирующий прямое попадание на пользователя холодного воздушного потока.', 'Настенный', 0),
 /* 21 */
-('Сплит-системы Midea PERSONA (MSAG4) On/off', '["/midea/midea-persona-0.jpg", "/midea/midea-persona-1.jpg", "/midea/midea-persona-2.jpg", "/midea/midea-persona-3.jpg"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы Midea PERSONA (MSAG4) On/off', '["/midea/midea-persona-0.jpg", "/midea/midea-persona-1.jpg", "/midea/midea-persona-2.jpg", "/midea/midea-persona-3.jpg"]', 'Midea', 'Китай', 'Настенный кондиционер Midea (Мидеа) оснащается множеством различных функций, которые позволяют быстро и просто создать комфортные условия микроклимата в небольшом помещении. Для данной модели характерен низкий уровень шума внутреннего блока и высокая энергоэффективность. Настенные сплит-системы серии Persona (MSAG4) – это современные кондиционеры со стильными внутренними блоками, выполненными в глянцевом чёрном цвете.', 'Настенный', 0),
 /* 22 */
-('Сплит-системы Midea PERSONA (MSAG4) Inverter', '["/midea/midea-persona-0.jpg", "/midea/midea-persona-1.jpg", "/midea/midea-persona-2.jpg", "/midea/midea-persona-3.jpg"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы Midea PERSONA (MSAG4) Inverter', '["/midea/midea-persona-0.jpg", "/midea/midea-persona-1.jpg", "/midea/midea-persona-2.jpg", "/midea/midea-persona-3.jpg"]', 'Midea', 'Китай', 'Настенный кондиционер Midea (Мидеа) оснащается множеством различных функций, которые позволяют быстро и просто создать комфортные условия микроклимата в небольшом помещении. Для данной модели характерен низкий уровень шума внутреннего блока и высокая энергоэффективность. Настенные сплит-системы серии Persona (MSAG4) – это современные кондиционеры со стильными внутренними блоками, выполненными в глянцевом чёрном цвете.', 'Настенный', 0),
 /* 23 */
-('МОБИЛЬНЫЕ КОНДИЦИОНЕРЫ (MPPDB) Midea On/off', '["/midea/midea-mobile-0.jpg", "/midea/midea-mobile-1.jpg", "/midea/midea-mobile-2.jpg", "/midea/midea-mobile-3.jpg"]', 'Midea', 'Китай', 'ОПИСАНИЕ', 'Мобильный', 0);
+('МОБИЛЬНЫЕ КОНДИЦИОНЕРЫ (MPPDB) Midea On/off', '["/midea/midea-mobile-0.jpg", "/midea/midea-mobile-1.jpg", "/midea/midea-mobile-2.jpg", "/midea/midea-mobile-3.jpg"]', 'Midea', 'Китай', 'Midea (Мидеа) MPPDB - универсальный в использовании агрегат с эргономичной конструкцией. Модель отличается компактными габаритами, малыми весовыми характеристиками и наличием функции осушения воздуха. Мобильные кондиционеры серии MPPDB обеспечивают качественное охлаждение и нагрев воздуха. Устройства оснащаются ручкой для переноски и транспортировочными колесиками. Для управления приборами предусмотрена сенсорная панель, расположенная на лицевой части корпуса. Модели отличаются низким энергопотреблением.', 'Мобильный', 0);
 
 INSERT INTO conditioner_models (conditioner_id, name, area, price, promo_price, performance_cold, performance_warm, power_input_cold, power_input_warm, indoor_sizes, `wi-fi`)
 VALUES 
@@ -281,23 +283,28 @@ Kentatsu
 INSERT INTO conditioners (name, images, brand, country, description, type, inverter) 
 VALUES
 /* 24 */
-('Сплит-системы KENTATSU серия KANAMI (KSGA/KSRA) on/off', '["/kentatsu/kentatsu-kanami-0.jpg", "/kentatsu/kentatsu-kanami-1.jpg", "/kentatsu/kentatsu-kanami-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы KENTATSU серия KANAMI (KSGA/KSRA) on/off', '["/kentatsu/kentatsu-kanami-0.jpg", "/kentatsu/kentatsu-kanami-1.jpg", "/kentatsu/kentatsu-kanami-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'Кондиционер, соединивший в себе современные способы заботы об окружающей среде и технологии, повышающие уровень комфорта. Тенденции последних лет подвигли разработчиков Kanami на внедрение в оборудование современных способов заботы об окружающей среде и технологий, повышающих уровень комфорта для пользователя.
+Экологичный хладагент R-32, DC-инверторные GMCC компрессоры, энергоэффективность класса «А» — отвеча ют высоким современным стандартам.', 'Настенный', 0),
 /* 25 */
-('Сплит-системы KENTATSU серия KANAMI (KSGA/KSRA) inverter', '["/kentatsu/kentatsu-kanami-0.jpg", "/kentatsu/kentatsu-kanami-1.jpg", "/kentatsu/kentatsu-kanami-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы KENTATSU серия KANAMI (KSGA/KSRA) inverter', '["/kentatsu/kentatsu-kanami-0.jpg", "/kentatsu/kentatsu-kanami-1.jpg", "/kentatsu/kentatsu-kanami-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'Кондиционер, соединивший в себе современные способы заботы об окружающей среде и технологии, повышающие уровень комфорта. Тенденции последних лет подвигли разработчиков Kanami на внедрение в оборудование современных способов заботы об окружающей среде и технологий, повышающих уровень комфорта для пользователя.
+Экологичный хладагент R-32, DC-инверторные GMCC компрессоры, энергоэффективность класса «А» — отвеча ют высоким современным стандартам.', 'Настенный', 1),
 /* 26 */
-('Сплит-системы KENTATSU серия TIBA (KSGTI/KSRTI) on/off', '["/kentatsu/kentatsu-tiba-0.jpg", "/kentatsu/kentatsu-tiba-1.jpg", "/kentatsu/kentatsu-tiba-2.jpg", "/kentatsu/kentatsu-tiba-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы KENTATSU серия TIBA (KSGTI/KSRTI) on/off', '["/kentatsu/kentatsu-tiba-0.jpg", "/kentatsu/kentatsu-tiba-1.jpg", "/kentatsu/kentatsu-tiba-2.jpg", "/kentatsu/kentatsu-tiba-3.jpg"]', 'Kentatsu', 'Япония', 'Kentatsu TIBA – это союз лаконичности и практичности, в лучших японских традициях. Компактный внутренний блок с лёгкостью вольётся в любой интерьер, а благодаря антикоррозионному покрытию теплообменника Blue Fin и быстросъёмному фильтру Easy Clean вы сможете дышать чистым воздухом, будучи уверенными в надёжности устройства.', 'Настенный', 0),
 /* 27 */
-('Сплит-системы KENTATSU серия TIBA INVERTER (KSGTI/KSRTI)', '["/kentatsu/kentatsu-tiba-0.jpg", "/kentatsu/kentatsu-tiba-1.jpg", "/kentatsu/kentatsu-tiba-2.jpg", "/kentatsu/kentatsu-tiba-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы KENTATSU серия TIBA INVERTER (KSGTI/KSRTI)', '["/kentatsu/kentatsu-tiba-0.jpg", "/kentatsu/kentatsu-tiba-1.jpg", "/kentatsu/kentatsu-tiba-2.jpg", "/kentatsu/kentatsu-tiba-3.jpg"]', 'Kentatsu', 'Япония', 'Kentatsu TIBA – это союз лаконичности и практичности, в лучших японских традициях. Компактный внутренний блок с лёгкостью вольётся в любой интерьер, а благодаря антикоррозионному покрытию теплообменника Blue Fin и быстросъёмному фильтру Easy Clean вы сможете дышать чистым воздухом, будучи уверенными в надёжности устройства.', 'Настенный', 1),
 /* 28 */
-('Сплит-системы KENTATSU серия ICHI (KSGI/KSRI) on/off', '["/kentatsu/kentatsu-kanami-0.jpg", "/kentatsu/kentatsu-kanami-1.jpg", "/kentatsu/kentatsu-kanami-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы KENTATSU серия ICHI (KSGI/KSRI) on/off', '["/kentatsu/kentatsu-kanami-0.jpg", "/kentatsu/kentatsu-kanami-1.jpg", "/kentatsu/kentatsu-kanami-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'Серия настенных сплит-систем ICHI разработана компанией Kentatsu для работы в жилых, офисных, торговых помещениях небольших магазинов. Современный стиль оформления внутреннего блока, насыщенность многообразием режимов и функций.  Улучшена система контроля и защиты.
+В модельном ряду 5 типоразмеров мощностью от 2,34 до 7,03 кВт — все они обладают классами энергоэффективности «А» в режиме охлаждения и обогрева.', 'Настенный', 0),
 /* 29 */
-('Сплит-системы KENTATSU серия Naomi (KSRN/KSGN) on/off', '["/kentatsu/kentatsu-naomi-0.jpg", "/kentatsu/kentatsu-naomi-1.jpg", "/kentatsu/kentatsu-naomi-2.jpg", "/kentatsu/kentatsu-naomi-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы KENTATSU серия Naomi (KSRN/KSGN) on/off', '["/kentatsu/kentatsu-naomi-0.jpg", "/kentatsu/kentatsu-naomi-1.jpg", "/kentatsu/kentatsu-naomi-2.jpg", "/kentatsu/kentatsu-naomi-3.jpg"]', 'Kentatsu', 'Япония', 'Настенный кондиционер бытовой серии большой производительности Naomi подходит для помещений площадью до 100 квадратных метров. Функции снижения уровня шума и экономии электроэнергии позволяют обеспечить максимальный уровень комфорта для потребителя. Будучи сплит-системой с постоянной производительностью возможна доработка низкотемпературным комплектом по предварительному заказу. С его помощью можно обеспечить надежную и эффективную работу кондиционера на охлаждение при отрицательных температурах наружного воздуха.', 'Настенный', 0),
 /* 30 */
-('Сплит-системы KENTATSU серия SEMPAI (KSGP/KSRP) inverter', '["/kentatsu/kentatsu-sempai-0.jpg", "/kentatsu/kentatsu-sempai-1.jpg", "/kentatsu/kentatsu-sempai-2.jpg", "/kentatsu/kentatsu-sempai-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы KENTATSU серия SEMPAI (KSGP/KSRP) inverter', '["/kentatsu/kentatsu-sempai-0.jpg", "/kentatsu/kentatsu-sempai-1.jpg", "/kentatsu/kentatsu-sempai-2.jpg", "/kentatsu/kentatsu-sempai-3.jpg"]', 'Kentatsu', 'Япония', 'Кондиционер выполнен в технологичном дизайне, имеет низкий уровень шума и интеллектуальное управление. KENTATSU SEMPAI полностью соответствует требованиям регламента ERP.
+Уникальный дизайн в формате «EASY CLIMATE PRO»
+Внутренний блок сконструирован по технологии «Easy Climate PRO», которая существенно облегчает работы по монтажу кондиционера, а так же его обслуживание в процессе эксплуатации.', 'Настенный', 1),
 /* 31 */
-('Сплит-системы KENTATSU серия OTARI (KSGY/KSRY) inverter', '["/kentatsu/kentatsu-sempai-0.jpg", "/kentatsu/kentatsu-otari-1.jpg", "/kentatsu/kentatsu-sempai-2.jpg", "/kentatsu/kentatsu-sempai-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы KENTATSU серия OTARI (KSGY/KSRY) inverter', '["/kentatsu/kentatsu-sempai-0.jpg", "/kentatsu/kentatsu-otari-1.jpg", "/kentatsu/kentatsu-sempai-2.jpg", "/kentatsu/kentatsu-sempai-3.jpg"]', 'Kentatsu', 'Япония', 'За плавными линиями и изысканными боковыми вставками кондиционеров серии OTARI скрываются возможности теплового насоса с инверторными технологиями. Обладая высокой энергоэффективностью, кондиционер обеспечивает комфортное охлаждение днем и не беспокоит во время сна.', 'Настенный', 1),
 /* 32 */
-('Сплит-системы KENTATSU серия OMORI (KSGOM/KSROM) inverter', '["/kentatsu/kentatsu-omori-0.jpg", "/kentatsu/kentatsu-omori-1.jpg", "/kentatsu/kentatsu-omori-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1);
+('Сплит-системы KENTATSU серия OMORI (KSGOM/KSROM) inverter', '["/kentatsu/kentatsu-omori-0.jpg", "/kentatsu/kentatsu-omori-1.jpg", "/kentatsu/kentatsu-omori-2.jpg", "/kentatsu/kentatsu-kanami-3.jpg"]', 'Kentatsu', 'Япония', 'Kentatsu (Кентатсу) OMORI - стильная функциональная новинка от японского бренда. За элегантной зеркальной панелью скрывается передовой инверторный компрессор с низким уровнем шума и бережным энергопотреблением. Жалюзи округлой формы распределяют воздушный поток на 180°, равномерно охлаждая или обогревая пространство. Фильтр высокой плотности задерживает на 80 % больше пыльцы и пыли.', 'Настенный', 1);
 
 INSERT INTO conditioner_models (conditioner_id, name, area, price, promo_price, performance_cold, performance_warm, power_input_cold, power_input_warm, indoor_sizes, `wi-fi`)
 VALUES
@@ -372,25 +379,25 @@ Dichi
 INSERT INTO conditioners (name, images, brand, country, description, type, inverter) 
 VALUES
 /* 33 */
-('Сплит-системы DAICHI серия EVEREST On/Off', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы DAICHI серия EVEREST On/Off', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'Серия Everest - кондиционеры с белой матовой лицевой панелью, которые отлично впишутся в интерьер. Фильтр предварительной очистки с ионами серебра и ионизатор воздуха создадут комфортную атмосферу и улучшат самочувствие.', 'Настенный', 0),
 /* 34 */
-('Сплит-системы DAICHI серия ICE On/Off', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы DAICHI серия ICE On/Off', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'Серия ICE – системы обладающие оптимальными режимами работы на каждом этапе, от монтажа до эксплуатации и наиболее востребованными потребительскими функциями.', 'Настенный', 0),
 /* 35 */
-('Сплит-системы DAICHI серия O2 inverter R-32', '["/daichi/daichi-o2-0.jpg", "/daichi/daichi-o2-1.jpg", "/daichi/daichi-o2-2.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы DAICHI серия O2 inverter R-32', '["/daichi/daichi-o2-0.jpg", "/daichi/daichi-o2-1.jpg", "/daichi/daichi-o2-2.jpg"]', 'Daichi', 'Япония', 'Серия О2 inverter - надежные, высокоэффективные инверторные кондиционеры. Режим Standby обеспечит минимальное потребление энергии в режиме ожидания, а функция IFeel обеспечит самый комфортный температурный режим.', 'Настенный', 1),
 /* 36 */
-('Сплит-системы DAICHI серия ICE inverter', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы DAICHI серия ICE inverter', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'Серия ICE – системы обладающие оптимальными режимами работы на каждом этапе, от монтажа до эксплуатации и наиболее востребованными потребительскими функциями.', 'Настенный', 1),
 /* 37 */
-('Сплит-системы DAICHI серия дизайнерская CARBON On/Off', '["/daichi/daichi-carbon-0.jpg", "/daichi/daichi-carbon-1.jpg", "/daichi/daichi-carbon-2.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы DAICHI серия дизайнерская CARBON On/Off', '["/daichi/daichi-carbon-0.jpg", "/daichi/daichi-carbon-1.jpg", "/daichi/daichi-carbon-2.jpg"]', 'Daichi', 'Япония', 'Серия CARBON - дизайнерская модель со специальной обработкой лицевой панели черного цвета с эффектом стеклянного блеска. Пульт в цвет корпуса блока идеально добавляет индивидуальности этой модели.', 'Настенный', 0),
 /* 38 */
-('Сплит-системы DAICHI серия AIR On/Off', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 0),
+('Сплит-системы DAICHI серия AIR On/Off', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'Серия AIR с инновационными запатентованными технологиями создает максимальный комфорт в помещении, обеззараживает воздух, благотворно влияет на самочувствие.', 'Настенный', 0),
 /* 39 */
-('Сплит-системы DAICHI серия AIR inverter', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы DAICHI серия AIR inverter', '["/daichi/daichi-everest-0.jpg", "/daichi/daichi-everest-1.jpg", "/daichi/daichi-everest-2.jpg", "/daichi/daichi-everest-3.jpg"]', 'Daichi', 'Япония', 'Серия AIR с инновационными запатентованными технологиями создает максимальный комфорт в помещении, обеззараживает воздух, благотворно влияет на самочувствие.', 'Настенный', 1),
 /* 40 */
-('Сплит-системы DAICHI серия CARBON inverter', '["/daichi/daichi-carbon-0.jpg", "/daichi/daichi-carbon-1.jpg", "/daichi/daichi-carbon-2.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы DAICHI серия CARBON inverter', '["/daichi/daichi-carbon-0.jpg", "/daichi/daichi-carbon-1.jpg", "/daichi/daichi-carbon-2.jpg"]', 'Daichi', 'Япония', 'Серия CARBON - дизайнерская модель со специальной обработкой лицевой панели черного цвета с эффектом стеклянного блеска. Пульт в цвет корпуса блока идеально добавляет индивидуальности этой модели.', 'Настенный', 1),
 /* 41 */
-('Сплит-системы DAICHI серия EVOLUTION (обогрев до -30°C) inverter', '["/daichi/daichi-evolution-0.jpg", "/daichi/daichi-evolution-1.jpg", "/daichi/daichi-evolution-2.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1),
+('Сплит-системы DAICHI серия EVOLUTION (обогрев до -30°C) inverter', '["/daichi/daichi-evolution-0.jpg", "/daichi/daichi-evolution-1.jpg", "/daichi/daichi-evolution-2.jpg"]', 'Daichi', 'Япония', 'Тепловой насос «воздух-воздух» DAICHI EVOLUTION (EVO) специально адаптирован для работы на обогрев в условиях низких температур. Возможность эксплуатации всего модельного ряда при температурах до - 30 °С на обогрев, от -18 °С до +52 °С на охлаждение.', 'Настенный', 1),
 /* 42 */
-('Сплит-системы DAICHI Тепловой насос серии SIBERIA (обогрев до -25°C) inverter ', '["/daichi/daichi-siberia-0.jpg", "/daichi/daichi-siberia-1.jpg", "/daichi/daichi-siberia-2.jpg"]', 'Daichi', 'Япония', 'ОПИСАНИЕ', 'Настенный', 1);
+('Сплит-системы DAICHI Тепловой насос серии SIBERIA (обогрев до -25°C) inverter ', '["/daichi/daichi-siberia-0.jpg", "/daichi/daichi-siberia-1.jpg", "/daichi/daichi-siberia-2.jpg"]', 'Daichi', 'Япония', 'Тепловой насос «воздух-воздух». DAICHI SIBERIA (SIB) обеспечивает энергоэффективное охлаждение и обогрев в широком диапазоне наружных температур. Возможность эксплуатации всего модельного ряда при температурах от - 25 °С до 30°С на обогрев, от -15 °С до +50 °С на охлаждение.', 'Настенный', 1);
 
  -- DAICHI серия EVEREST On\Off
 INSERT INTO conditioner_models (conditioner_id, name, area, price, promo_price, performance_cold, performance_warm, power_input_cold, power_input_warm, indoor_sizes, `wi-fi`)
