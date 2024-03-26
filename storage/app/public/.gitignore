@@ -1,4 +1,5 @@
 *
 !.gitignore
-!biryusa-fortuna.png
+!/biryusa/
+!/biryusa/*
 !placeholder.jpg
