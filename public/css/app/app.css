@@ -74,3 +74,11 @@ footer {
 a {
     text-decoration: none !important;
 }
+
+.body_hide {
+    opacity: 0;
+    transition: 0.4s opacity ease-in-out;
+}
+.body_visible {
+    opacity: 1;
+}
