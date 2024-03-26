@@ -10,7 +10,7 @@
             'Установка кондиционеров в Симферополе - широкий выбор сплит-систем по доступным ценам. Профессиональная установка. Официальная гарантия.',
         'ogTitle' => 'Купить кондиционер в Симферополе недорого | Установка кондиционеров | Климат и Точка Крым',
         'ogDescription' => 'Купить кондиционер в Симферополе по выгодной цене. Большой выбор сплит-систем. Профессиональная установка.
-                            Сервисное обслуживание. Климат и Точка Крым',
+                                        Сервисное обслуживание. Климат и Точка Крым',
         'ogUrl' => env('APP_URL') . '/conditioners',
     ])
 @endsection
@@ -27,7 +27,7 @@
             'Площадь помещения' => ['name' => 'area', 'values' => $filter['area']],
             'Тип кондиционера' => ['name' => 'type', 'values' => $filter['type']],
         ],
-        'filterByBoolean' => ['Инвертор' => 'invertor', 'Wi-Fi' => 'wi-fi'],
+        'filterByBoolean' => ['Инвертор' => 'inverter', 'Wi-Fi' => 'wi-fi'],
     ])
 
     <div class="container py-3">
@@ -40,7 +40,7 @@
                             'name' => $model['conditioner']['name'] . ' ' . $model['name'],
                             'brand' => $model['conditioner']['brand'],
                             'type' => $model['conditioner']['type'],
-                            'invertor' => $model['conditioner']['invertor'],
+                            'inverter' => $model['conditioner']['inverter'],
                             'area' => $model['area'],
                             'price' => $model['price'],
                             'promo_price' => $model['promo_price'],

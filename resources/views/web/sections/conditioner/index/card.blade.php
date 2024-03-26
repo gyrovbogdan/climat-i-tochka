@@ -36,9 +36,9 @@
                 <p class='text-muted fw-medium'>{{ $type }}</p>
             </a>
             <a class='d-flex justify-content-between my-1'
-                href="{{ route('conditioners.index', ['invertor' => [$invertor]]) }}">
+                href="{{ route('conditioners.index', ['inverter' => [$inverter]]) }}">
                 <p class='text-muted'>Инвертор</p>
-                <p class='text-muted fw-medium'>{{ $type ? 'Да' : 'Нет' }}</p>
+                <p class='text-muted fw-medium'>{{ $inverter ? 'Да' : 'Нет' }}</p>
             </a>
 
 
