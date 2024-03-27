@@ -31,7 +31,7 @@
         ])
     </header>
 
-    <main class="body_hide">
+    <main>
         @yield('content')
     </main>
 
