@@ -7,7 +7,7 @@
             <div class="position-absolute ml-auto" style="right: 20px; top: 10px; z-index:1000;">
                 <h5>
                     <span class='badge text-bg-danger bg-red bg-gradient'>
-                        -{{ (1 - round($promo_price / $price, 2)) * 100 }}%</span>
+                        -{{ $promo_price && $price ? (1 - round($promo_price / $price, 2)) * 100 : '' }}%</span>
                 </h5>
             </div>
         @endif
