@@ -12,13 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'public/css/app/app.css', 'public/css/app/partials/navbar.css'])
     @stack('stylesheets')
-    <noscript>
-        <style>
-            .body_hide {
-                opacity: 1 !important;
-            }
-        </style>
-    </noscript>
 </head>
 
 <body>
