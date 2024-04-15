@@ -46,7 +46,10 @@
                         </svg></a></li>
             </ul>
         </div>
-
+        <div class="d-flex flex-wrap justify-content-center my-2">
+            <p class='text-muted fw-bold'>Сайт сделал
+                gyrovbogdan@gmail.com
+        </div>
         <div class="d-flex flex-wrap justify-content-center"><a class='text-muted'
                 href="{{ route('filament.admin.auth.login') }}">Для администрации</a></div>
 
