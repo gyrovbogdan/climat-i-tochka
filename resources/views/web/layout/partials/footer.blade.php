@@ -47,7 +47,7 @@
             </ul>
         </div>
         <div class="d-flex flex-wrap justify-content-center my-2">
-            <p class='text-muted fw-bold'>Сайт сделал
+            <p class='text-muted fw-bold'>Сайт сделан
                 gyrovbogdan@gmail.com
         </div>
         <div class="d-flex flex-wrap justify-content-center"><a class='text-muted'
