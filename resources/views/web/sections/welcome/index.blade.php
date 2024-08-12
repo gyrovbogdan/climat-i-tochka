@@ -16,10 +16,7 @@
 @endpush
 
 @section('content')
-    @include('web.sections.welcome.carousel', [
-        'model' => $model,
-        'service' => $service,
-    ])
+    @include('web.sections.welcome.carousel', compact('promoConditioner', 'promoService'))
     @include('web.sections.welcome.cards')
     @include('web.sections.welcome.features')
 @endsection

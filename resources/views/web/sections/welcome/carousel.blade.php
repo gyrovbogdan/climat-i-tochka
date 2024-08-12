@@ -22,38 +22,38 @@
                             <div class="card bg-transparent bg-darkened bg-blur border-white">
                                 <h1
                                     class="text-white fw-semibold bg-danger bg-gradient card-img-top border-bottom border-white h2 py-1">
-                                    @if (isset($model['promo_price']))
+                                    @if (isset($promoConditioner['promo_price']))
                                         СКИДКА
                                         <span class=''>
-                                            -{{ (1 - round($model['promo_price'] / $model['price'], 2)) * 100 }}%</span>
+                                            -{{ (1 - round($promoConditioner['promo_price'] / $promoConditioner['price'], 2)) * 100 }}%</span>
                                     @else
                                         <span class=''>ХИТ-ПРОДАЖ!</span>
                                     @endif
                                 </h1>
                                 <div class="card-body">
                                     <h1 class="rounded-4-bottom fw-semibold text-danger ">
-                                        @if (isset($model['promo_price']))
+                                        @if (isset($promoConditioner['promo_price']))
                                             <span class='text-decoration-line-through text-light fs-2'>
-                                                {!! number_format($model['price'], 2, ',', '&nbsp;') !!}₽
+                                                {!! number_format($promoConditioner['price'], 2, ',', '&nbsp;') !!}₽
                                             </span>
                                             <strong class="">
-                                                {!! number_format($model['promo_price'], 2, ',', '&nbsp;') !!}₽
+                                                {!! number_format($promoConditioner['promo_price'], 2, ',', '&nbsp;') !!}₽
                                             </strong>
                                         @else
-                                            @if (isset($model['price']))
+                                            @if (isset($promoConditioner['price']))
                                                 <strong
-                                                    class="fs-3">{{ number_format($model['price'], 2, ',', ' ') }}₽</strong>
+                                                    class="fs-3">{{ number_format($promoConditioner['price'], 2, ',', ' ') }}₽</strong>
                                             @endif
                                         @endif
                                     </h1>
                                     <div class="">
                                         <h1 class="mx-auto text-light h3 fs-5">
-                                            {{ $model['conditioner']['name'] ?? '-' }}
+                                            {{ $promoConditioner['conditioner']['name'] ?? '-' }}
                                         </h1>
                                     </div>
                                     <div>
-                                        @if (isset($model['id']))
-                                            <a href="{{ route('conditioners.show', ['conditioner' => $model['id']]) }}"
+                                        @if (isset($promoConditioner['id']))
+                                            <a href="{{ route('conditioners.show', ['conditioner' => $promoConditioner['id']]) }}"
                                                 class="btn btn-lg btn-outline-light my-2">Подробнее</a>
                                         @endif
                                     </div>
@@ -69,10 +69,12 @@
             <div class="container">
                 <div class="carousel-caption text-start">
                     <div class="card-body">
-                        <h1 class="text-white">{{ $service['name'] ?? '-' }}</h1>
+                        <h1 class="text-white">{{ $promoService['name'] ?? '-' }}</h1>
                         <h1 class="rounded-4-bottom fw-semibold text-danger ">
-                            @if (isset($service['price']))
-                                {!! is_numeric($service['price']) ? number_format($service['price'], 2, ',', '&nbsp;') : $service['price'] !!}₽
+                            @if (isset($promoService['price']))
+                                {!! is_numeric($promoService['price'])
+                                    ? number_format($promoService['price'], 2, ',', '&nbsp;')
+                                    : $promoService['price'] !!}₽
                             @endif
                         </h1>
                         <div>
