@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\Conditioner;
 use App\Models\ConditionerModel;
 use App\Models\Service;
-use Illuminate\Database\Eloquent\Builder;
 
 class ConditionerController extends Controller
 {
