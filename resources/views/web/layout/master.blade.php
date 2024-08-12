@@ -35,7 +35,6 @@
         'whatsApp' => $contacts['whatsApp'] ?? '',
         'telegram' => $contacts['telegram'] ?? '',
     ])
-    <script src="{{ asset('js/app.js') }}"></script>
     @stack('scripts')
 
 </html>

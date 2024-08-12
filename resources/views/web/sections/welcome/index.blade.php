@@ -20,3 +20,7 @@
     @include('web.sections.welcome.cards')
     @include('web.sections.welcome.features')
 @endsection
+
+@push('scripts')
+    @vite(['public/js/sidebar.js'])
+@endpush
