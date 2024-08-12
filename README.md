@@ -134,10 +134,10 @@
 
 ## Технологии
 
--   Laravel
--   MySQL
--   Bootstrap
--   Filament(Панель администратора)
+-   Laravel 10
+-   MySQL 8.4
+-   Bootstrap 5
+-   Filament 3(Панель администратора)
 
 ## Контакты
 
