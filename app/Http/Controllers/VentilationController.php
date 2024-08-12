@@ -11,6 +11,7 @@ class VentilationController extends Controller
      */
     public function index()
     {
-        return view('web.sections.ventilation.index', ['phone' => Contact::where('name', 'phone')->firstOrFail()->value('data')]);
+        $phone = Contact::where('name', 'phone')->firstOrFail()->value('data');
+        return view('web.sections.ventilation.index', compact('phone'));
     }
 }
