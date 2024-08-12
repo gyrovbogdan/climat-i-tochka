@@ -64,6 +64,6 @@ class DatabaseSeeder extends Seeder
         Contact::create(['name' => 'telegram', 'data' => 'https://telegram.me/имя_пользователя']);
 
 
-        User::create(['name' => 'admin', 'password' => 'admin']);
+        User::create(['email' => 'admin@admin.com', 'name' => 'admin', 'password' => 'admin']);
     }
 }
