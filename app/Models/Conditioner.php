@@ -15,7 +15,7 @@ class Conditioner extends Model
 
     protected $casts = ['images' => 'array'];
 
-    public function conditionerModel()
+    public function conditionerModels()
     {
         return $this->hasMany(ConditionerModel::class);
     }

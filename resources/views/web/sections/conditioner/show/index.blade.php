@@ -47,8 +47,8 @@
                         'additionalServices' => $additionalServices,
                     ])
                     @include('web.sections.conditioner.show.also', [
-                        'conditioner' => $fromSeries[0],
-                        'models' => $fromSeries[0]['conditionerModel']->where('id', '!=', $model['id']),
+                        'conditioner' => $conditioner,
+                        'models' => $fromSeries,
                     ])
                 </div>
             </div>

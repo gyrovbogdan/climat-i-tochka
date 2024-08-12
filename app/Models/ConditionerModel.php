@@ -18,7 +18,7 @@ class ConditionerModel extends Model
         return $this->belongsTo(Conditioner::class);
     }
 
-    public function getResultsByQuery()
+    public static function getResultsByQuery()
     {
         $whereCondition = function (Builder $query, $params) {
             foreach ($params as $paramKey) {

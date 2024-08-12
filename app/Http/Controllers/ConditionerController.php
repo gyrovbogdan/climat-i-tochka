@@ -14,19 +14,17 @@ class ConditionerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(ConditionerModel $model)
+    public function index()
     {
-        $filter =
+        $filterList =
             [
                 'area' => config('global.areas'),
                 'type' => config('global.types'),
                 'brand' => Conditioner::query()->distinct()->pluck('brand')->sort(),
             ];
 
-        return view('web.sections.conditioner.index.index', [
-            'models' => $model->getResultsByQuery(),
-            'filter' => $filter
-        ]);
+        $models = ConditionerModel::getResultsByQuery();
+        return view('web.sections.conditioner.index.index', compact('models', 'filterList'));
     }
 
     /**
@@ -34,13 +32,16 @@ class ConditionerController extends Controller
      */
     public function show(string $id)
     {
-        return view('web.sections.conditioner.show.index', [
-            'model' => ConditionerModel::with('conditioner')->findOrFail($id),
-            'services' => Service::get(),
-            'additionalServices' => AdditionalService::get(),
-            'fromSeries' => Conditioner::with('conditionerModel')->whereHas('conditionerModel', function (Builder $query) use ($id) {
-                $query->where('id', $id);
-            })->get()
-        ]);
+        $model = ConditionerModel::findOrFail($id);
+        $conditioner = $model->conditioner()->first();
+        $fromSeries = $conditioner->conditionerModels()->get();
+
+        $services = Service::get();
+        $additionalServices = AdditionalService::get();
+
+        return view(
+            'web.sections.conditioner.show.index',
+            compact('model', 'services', 'additionalServices', 'fromSeries', 'conditioner')
+        );
     }
 }
